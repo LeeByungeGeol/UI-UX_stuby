@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-v-else-if</title>
+</head>
+<body>
+    <div id="app">
+        <span v-if="value > 10">10보다 큽니다</span>
+        <span v-else-if="value === 10">10이네요~~~~</span>
+        <span v-else>10보다 작습니다.</span>
+    </div>
+
+    <script src="http://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                value:0
+            }
+        })
+    </script>
+</body>
+</html>

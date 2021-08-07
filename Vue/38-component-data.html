@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38-component-data</title>
+</head>
+
+<body>
+    <h1>component data</h1>
+    <p>data는 반드시 함수 이어야한다. </p>
+    <div id="app">
+        <s-counter></s-counter>
+        <s-counter></s-counter>
+    </div>
+    <script src="http://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        //버튼을 클릭하면 숫자가 1씩 증가는되는 버튼 만들기
+        Vue.component("s-counter",{
+            template:"<button v-on:click='num++'>{{num}}</button>",
+            data:function(){
+                return{
+                    num:0
+                }
+            }
+        })
+
+        new Vue({
+            el:"#app"
+        })
+    </script>
+</body>
+
+</html>

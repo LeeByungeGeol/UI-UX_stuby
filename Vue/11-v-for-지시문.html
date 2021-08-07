@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-v-for-index-지시문</title>
+</head>
+<body>
+    <h1>v-for index</h1>
+    <div id="app">
+        <h1>내일의 할일</h1>
+        <ul>
+            <li v-for="(todo,i) in todos">{{i}} {{todo}}</li>
+        </ul>
+    </div>
+    <script src="http://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                todos:["시험지 준비하기","앱만들기","예방접종 예약하기"]
+            }
+        })
+    </script>
+</body>
+</html>

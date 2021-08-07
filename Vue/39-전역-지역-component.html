@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39-전역-지역-component</title>
+</head>
+<body>
+    <h1>전역-지역</h1>
+    <div id="app">
+        <h2>app</h2>
+        <global-com></global-com>
+        <local-com></local-com>
+
+    </div>
+    <div id="app2">
+        <h2>app2</h2>
+        <global-com></global-com>
+        <local-com></local-com>
+
+    </div>
+    <script src="http://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        //전역 component
+        Vue.component("global-com",{
+            template:"<div>전역 컴포넌트 </div>"
+        })
+
+        //지역 component
+        var local = {
+            template:"<div> <strong>지역</strong> component</div>"
+        }
+
+        new Vue({
+            el:"#app"
+        })
+        
+        new Vue({
+            el:"#app2",
+            components:{
+                "local-com":local
+            }
+        })
+    </script>
+</body>
+</html>

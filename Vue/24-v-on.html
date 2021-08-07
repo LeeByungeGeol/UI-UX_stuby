@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-v-on</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="hi('짱구')">짱구에게 인사</button>
+        <button v-on:click="hi('맹구')">맹구에게 인사</button>
+    </div>
+    <script src="http://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        // 짱구 버튼을 클릭하면 짱구안녕~이 출력
+        //맹구 버튼을 클릭하면 맹구 안녕~이 출력되도록
+        new Vue({
+            el:"#app",
+            methods:{
+                // hi:function(uName){
+                //     console.log(`${uName} 안녕~~`)
+                // }
+                hi(uName){
+                    console.log(`${uName} 안녕~~`)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

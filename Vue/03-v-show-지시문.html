@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-v-show-지시문</title>
+</head>
+<body>
+    <h1>v-show 변수값이 true 이면 보여주고, flase 이면 실행이 안됨</h1>
+    <div id="app">
+        <span v-html="msg" v-show="visible"></span>
+    </div>
+    <script src="http://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"<strong>안녕~ vue!!!</strong>",
+                visible :false
+            }
+        })
+    </script>
+</body>
+</html>

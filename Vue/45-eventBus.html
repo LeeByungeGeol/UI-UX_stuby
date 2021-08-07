@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45-eventBus</title>
+</head>
+<body>
+    <div id="app">
+        <h1>형제간의 통신</h1>
+        <my-com></my-com>
+        <your-com></your-com>
+    </div>
+    <script src="http://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        //1.이벤트 버스 선언하기
+        var eventBus = new Vue();
+
+        //component 2개
+        var myComp = {
+            template:"<div>mycom <button v-on:click='send'>내보내기</button></div>",
+            data(){
+                return{
+                    msg:"mycom의 내용입니다~"
+                }
+            },
+            methods:{
+                send:function(){
+                    //내가 가진 계산된 자료를 다른 형제에서 사용할수 있도록 이벤트 버스로 내보내기
+                    //2. 
+                    eventBus.$emit("onsend","mycomp에서 보낸 자료 : "+this.msg )
+                }
+            }
+        }
+        var yourComp = {
+            template:"<div>yourcom {{msg2}}</div>",
+            data:function(){
+                return{
+                    msg2:"yourcom의 내용!!!!"
+                }
+            },
+            // created:function(){
+            //     //3 eventBus.$on
+            //     eventBus.$on("onsend",this.onReceive)
+            // },
+            // methods:{
+            //     onReceive(text){
+            //         this.msg2 = text
+            //     }
+            // }
+            created:function(){
+                console.log(this) //Vuecomponent
+                var vm=this;
+                eventBus.$on("onsend",function(text){
+                    console.log(this) //Vue => eventBus
+                    vm.msg2=text
+                })
+            }
+        }
+
+        new Vue({
+            el:"#app",
+            data:{
+
+            },
+            components:{
+                "my-com":myComp,
+                "your-com":yourComp
+            }
+        })
+    </script>
+</body>
+</html>

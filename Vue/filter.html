@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+    <script>
+        var fruits=["apple","banana","mango","orange","grapes"]
+
+        //fruits 각각의 내용물의  글자 길이가 5보다 큰요소만 찾아서 새로운 배열에 넣기
+        // var newF = fruits.filter(function(aa){
+        //     if(aa.length>5){
+        //         return true
+        //     }
+        // })
+
+        // var newF = fruits.filter((aa) => {
+        //     return aa.length>5
+        // })
+
+        var newF = fruits.filter(aa => aa.length>5)
+
+
+
+        console.log(newF)
+
+
+
+    </script>
+</body>
+</html>
