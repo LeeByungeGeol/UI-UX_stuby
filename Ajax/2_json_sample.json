@@ -1,0 +1,7 @@
+{
+    "name":"홍길동",
+    "age":18,
+    "gender":"man",
+    "hoddy":["무술","활쏘기","태권도"],
+    "family":{"mother":"월매","father":"홍검사"}
+}

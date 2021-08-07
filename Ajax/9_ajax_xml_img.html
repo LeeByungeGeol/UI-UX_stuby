@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9_ajax_xml_img</title>
+    <style>
+        .banner>li{
+            list-style: none;
+            float: left;
+            width: 25%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .banner>li img{
+            width: 100%;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 9_xml_img.xml 파일을 불러오기
+            // .banner>li로 데이터를 추가하기
+            // photo의 title -> h1
+            // photo imgSrc < img src = "요기로" alt = "title">
+            $.ajax({
+                "url":"9_xml_img.xml",
+                "dataType":"xml",
+                "success":function(data){
+                    $(data).find("photo").each(function(){
+                        var hTitle = $(this).find("title").text();
+                        var mImg = $(this).find("imgSrc").text();
+                        console.log(hTitle,mImg);
+                        // var list = "<li><h1>"+hTitle+"</h1>"+"<img src='"+mImg"'></li>";
+                        var list = `<li><h1>${hTitle}</h1><img src=${mImg}</li>`;
+                        $(".banner").append(list);
+
+                    })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>ajax xml</h1>
+    <ul class="banner"></ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8_ajax_xml</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $.ajax({
+                    "url": "1_xml_sample.xml",
+                    dataType:"xml",
+                    success: function (data) {
+                        console.log(data);
+                        console.log($(data).find("student name").text());         
+                        $(data).find("student").each(function(){
+                            // var uName = "이름:" +$(this).find("name").text()+"<br>";
+                            var uName = `이름: ${$(this).find("name").text()} <br>`;
+                            $(".list").append(uName);
+                        })
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>ajax-xml</h1>
+    <p>ajax를 이용하여 1_xml_sample.xml 불러오기</p>
+    <p>xml안에 student 안에 name에 있는 글자만 불러서 list에 넣기</p>
+    <button>xml 물러오기</button>
+    <div class="list">
+
+    </div>
+
+</body>
+
+</html>

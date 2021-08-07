@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_ajax_html</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("button").on("click",function(){
+                $.ajax({
+                    "url":"4_load_txt.html",
+                    "success":function(data){
+                        console.log(data);
+                        // ul 찾기
+
+                        var ff = $("#wrap").html(data).find("ul");
+                        console.log(ff);
+                        $("#wrap").html(ff);
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>ajax-html</h1>
+    <p>button을 클릭하면 외부 4_load_txt.html의 내용을 불러서 #wrap안에 넣기</p>
+    <button>불러오기</button>
+    <div id="wrap">
+
+    </div>
+</body>
+
+</html>

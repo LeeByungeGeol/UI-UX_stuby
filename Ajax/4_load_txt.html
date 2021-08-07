@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_load_txt</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // button을 클릭하면 외부에 저장된 00_txt)sample.txt의 내용을
+            // .text안에 불러오기
+            $("button").on("click",function(){
+                $(".text").load("00_txt)sample.txt");
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <p>ajax의 load 명령어를 이용하여 외부 txt 문서 불러오기</p>
+    <p class="text">이곳에 txt 문서가 들어옴</p>
+    <button>불러오기</button>
+    <ul id="menu">
+        <li><a href="#">list1</a></li>
+        <li><a href="#">list2</a></li>
+        <li><a href="#">list3</a></li>
+    </ul>
+</body>
+</html>

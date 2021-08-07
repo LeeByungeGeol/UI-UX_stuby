@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myImg>
+    <photo>
+        <title>쿵푸1</title>
+        <imgSrc>images/_01.jpg</imgSrc>
+    </photo>
+    <photo>
+        <title>쿵푸2</title>
+        <imgSrc>images/_02.jpg</imgSrc>
+    </photo>
+    <photo>
+        <title>쿵푸3</title>
+        <imgSrc>images/_03.jpg</imgSrc>
+    </photo>
+    <photo>
+        <title>쿵푸4</title>
+        <imgSrc>images/_04.jpg</imgSrc>
+    </photo>
+    <photo>
+        <title>쿵푸5</title>
+        <imgSrc>images/_05.jpg</imgSrc>
+    </photo>
+    <photo>
+        <title>쿵푸6</title>
+        <imgSrc>images/_06.jpg</imgSrc>
+    </photo>
+    <photo>
+        <title>쿵푸7</title>
+        <imgSrc>images/_07.jpg</imgSrc>
+    </photo>
+    <photo>
+        <title>쿵푸8</title>
+        <imgSrc>images/_08.jpg</imgSrc>
+    </photo>
+</myImg>

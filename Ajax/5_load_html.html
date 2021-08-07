@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_load_htm</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // button을 클릭하면 04_load_html.html의 #menu>li를 불러서
+            //.list안에 넣기
+            $("button").on("click",function(){
+                $(".list").load("4_load_txt.html #menu>li")
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>load-html</h1>
+    <p>button을 클릭하면 04_load_txt.html의 내용 부르기</p>
+    <button>html불러오기</button>
+    <ol class="list">
+
+    </ol>
+</body>
+</html>
