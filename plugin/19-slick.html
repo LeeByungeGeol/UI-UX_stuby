@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-slick</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .banner{
+            width:800px;
+        }
+        .slick-track li {
+            padding: 20px;
+        }
+
+        h3 {
+            display: block;
+            background: #eee;
+            height: 200px;
+            text-align: center;
+            font-size:50px;
+            line-height: 200px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $(function () {
+            $(".banner").slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="center">
+        <ul class="banner">
+            <li><h3>1</h3></li>
+            <li><h3>2</h3></li>
+            <li><h3>3</h3></li>
+            <li><h3>4</h3></li>
+            <li><h3>5</h3></li>
+            <li><h3>6</h3></li>
+            <li><h3>7</h3></li>
+            <li><h3>8</h3></li>
+        </ul>
+    </div>
+</body>
+
+</html>

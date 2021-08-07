@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-parallax</title>
+    <style>
+        .parallax-window {
+            min-height: 400px;
+            background: transparent;
+        }
+        section{
+            height:400px;
+            background:white;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script>
+        $(function(){
+            $(".parallax-window").parallax();
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/main_PC_1920x440_20201006040046969.jpg">
+    </div>
+    <section>
+        <h2>글상자</h2>
+        <p>텍스트 입력하기</p>
+    </section>
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/main_PC_1920x440_20201028065401190.jpg">
+    </div>
+    <section>
+        <h2>글상자2</h2>
+        <p>텍스트 입력하기2</p>
+    </section>
+
+    
+
+</body>
+
+</html>

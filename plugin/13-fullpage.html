@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-fullpage</title>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/examples.css">
+</head>
+<body>
+    <!-- menu -->
+    <ul id="menu">
+        <li class="active" data-menuanchor="visual"><a href="#visual">visual</a></li>
+        <li data-menuanchor="sPage"><a href="#sPage">본문1</a></li>
+        <li data-menuanchor="tPage"><a href="#tPage">본문2</a></li>
+        <li data-menuanchor="lastPage"><a href="#lastPage">본문3</a></li>
+    </ul>
+    <!-- fullpage영역 -->
+    <div id="fullpage">
+        <section class="mainBanner section">
+            <h2>mainBanner</h2>
+        </section>
+        <section class="section1 section">
+            <h2>section1</h2>
+            <div class="slide">
+                <div>
+                    <h3 class="title">title1</h3>
+                    <p>banner1 포트폴리오1</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div>
+                    <h3 class="title">title2</h3>
+                    <p>banner2 포트폴리오2</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div>
+                    <h3 class="title">title3</h3>
+                    <p>banner3 포트폴리오3</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section2 section">
+            <h2>section2</h2>
+        </section>
+
+        <section class="section3 section">
+            <h2>section3</h2>
+        </section>
+    </div>
+    <script src="js/fullpage.js"></script>
+    <script>
+        var myFullpage = new fullpage("#fullpage",{
+            sectionsColor:["#1bbc9c","#4bbfc3","pink","#7baabe"],
+            menu:"#menu",
+            anchors:["visual","sPage","tPage","lastPage"],
+            navigation:true,
+            navigationTooltips:["visual","2th Page","3th page","4th page"],
+            navigationTooltip:true,
+            slidesNavigation:true,
+            // scrollingSpeed:2000
+        })
+    </script>
+</body>
+</html>

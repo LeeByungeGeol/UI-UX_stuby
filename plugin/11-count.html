@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-countDown</title>
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script>
+        $(function(){
+            $(".digits").countdown({
+                image:"images/digits.png",
+                endTime:new Date(2021,05,30)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="digits"></div>
+</body>
+</html>

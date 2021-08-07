@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        #chart {
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chart"></div>
+    <script>
+        var options = {
+            chart: {
+                // 차트종류 line,bar,donut
+                type: 'area'
+            },
+            series: [{
+                name: '판매량',
+                data: [400, 300, 500, 250]
+            }],
+            xaxis: {
+                categories: ["수박", "참외", "복숭아", "자두"]
+            },
+            // 레이블위치 설정하기
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        position: "top"
+                    }
+                }
+            },
+            // 채우기
+            fill: {
+                type: "gradient",
+                gradient: {
+                    colorStops: [
+                        {
+                            offset: 0,
+                            color: "#EB656F",
+                            opacity: 1
+                        },
+                        {
+                            offset: 50,
+                            color: "#FAD375",
+                            opacity: 1
+                        },
+                        {
+                            offset: 100,
+                            color: "#61DBC3",
+                            opacity: 1
+                        }
+                    ]
+                }
+            },
+            //선의 각 기본이 곡선 ,직각
+            stroke: {
+                curve:"straight"
+            }
+            
+        }
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render(); // react 명령어로 chart를 body안에 붙이기
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        /* #chart {
+            width: 600px;
+        } */
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+        var options ={
+            chart:{
+                type:"pie",
+                width:600
+            },
+            series:[50,66,23,55],
+            labels:["참외","수박","딸기","복숭아"],
+            // 반응형에 대한 설정
+            responsive:[{
+                // 해상도
+                breakpoint:480,
+                options:{
+                    chart:{
+                        width:400
+                    },
+                    legend :{
+                        position:"bottom"
+                    }
+                }
+            }]
+        };
+        var chart = new ApexCharts(document.querySelector("#chart"),options);
+        chart.render();
+    </script>
+</body>
+</html>

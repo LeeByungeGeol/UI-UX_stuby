@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        /* #chart {
+            width: 600px;
+        } */
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+        var options ={
+            chart:{
+                type:"bar",
+                width:600
+            },
+            series: [{
+                name: 'skill',
+                data: [95, 95, 85, 90,88]
+            }],
+            xaxis: {
+                categories:["html","css","javascript","jQuery","SCSS"]
+            },
+            colors: ['#EB656F', '#61DBC3', '#FAD375',"#1A73E8","#B32824"],
+            plotOptions: {
+                bar: {
+                    distributed: true,
+                    dataLabels: {
+                        position: 'top'
+                    },
+                }
+            },          
+            title:{
+                text:"MY SKILLS"
+            },
+            // 반응형에 대한 설정
+            responsive:[{
+                // 해상도
+                breakpoint:480,
+                options:{
+                    chart:{
+                        width:400
+                    },
+                    legend :{
+                        position:"bottom"
+                    }
+                }
+            }]
+        };
+        var chart = new ApexCharts(document.querySelector("#chart"),options);
+        chart.render();
+    </script>
+</body>
+</html>
