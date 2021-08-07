@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-controlgroup</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <style>
+        .wrap{
+            width:1000px;
+            margin:0 auto;
+        }
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>button group</h1>
+        <div data-role="controlgroup">
+            <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor1</a>
+            <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor2</a>
+            <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor3</a>
+            <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor4</a>
+        </div>
+
+
+        <h1>button horizontal group</h1>
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor1</a>
+            <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor2</a>
+            <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor3</a>
+            <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor4</a>
+        </div>
+
+        <h1>checkbox group</h1>
+        <form>
+            <fieldset data-role="controlgroup">
+                <legend>vertical group</legend>
+                <input type="checkbox" id="check1">
+                <label for="check1">check1</label>
+                <input type="checkbox" id="check2">
+                <label for="check2">check2</label>
+                <input type="checkbox" id="check3">
+                <label for="check3">check3</label>
+              </fieldset>
+        </form>
+        <h1>checkbox horizontal group</h1>
+        <form>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>vertical group</legend>
+                <input type="checkbox" id="check11">
+                <label for="check11">check11</label>
+                <input type="checkbox" id="check22">
+                <label for="check22">check22</label>
+                <input type="checkbox" id="check33">
+                <label for="check33">check33</label>
+              </fieldset>
+        </form>
+
+        <h1>radio group</h1>
+        <form>
+            <fieldset data-role="controlgroup">
+                <input type="radio" id="radio1" name="radio">
+                <label for="radio1">radio1</label>
+                <input type="radio" id="radio2" name="radio">
+                <label for="radio2">radio2</label>
+                <input type="radio" id="radio3" name="radio">
+                <label for="radio3">radio3</label>
+            </fieldset>
+        </form>
+        <h1>radio horizontal group</h1>
+        <form>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <input type="radio" id="radio11" name="hradio">
+                <label for="radio11">radio11</label>
+                <input type="radio" id="radio12" name="hradio">
+                <label for="radio12">radio12</label>
+                <input type="radio" id="radio13" name="hradio">
+                <label for="radio13">radio13</label>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

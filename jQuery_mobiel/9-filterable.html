@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-filter</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <style>
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>filter</h1>
+        <form action="" class="ui-filterable">
+            <input type="search" id="filter">
+        </form>
+        <ul data-role="listview" data-filter="true" data-input="#filter">
+            <li>apple</li>
+            <li>orange</li>
+            <li>banana</li>
+            <li>melon</li>
+            <li>pineapple</li>
+        </ul>
+
+
+        <h1>제목과 자식요소에서 찾기</h1>
+        <form>
+             <input data-type="search" id="searchForCollapsibleSet">
+        </form>
+        <div data-role="collapsibleset" data-filter="true" data-input="#searchForCollapsibleSet">
+                    <div data-role="collapsible">
+                            <h3>Animals</h3>
+                            <ul data-role="listview">
+                                    <li>Cats</li>
+                                    <li>Dogs</li>
+                                    <li>Lizards</li>
+                                    <li>Snakes</li>
+                                </ul>
+                        </div>
+                    <div data-role="collapsible">
+                            <h3>Cars</h3>
+                            <ul data-role="listview">
+                                    <li>Acura</li>
+                                    <li>Audi</li>
+                                    <li>BMW</li>
+                                    <li>Cadillac</li>
+                                </ul>
+                        </div>
+                    <div data-role="collapsible">
+                            <h3>Planets</h3>
+                            <ul data-role="listview">
+                                    <li>Earth</li>
+                                    <li>Jupiter</li>
+                                    <li>Mars</li>
+                                    <li>Mercury</li>
+                                </ul>
+                        </div>
+                </div>
+    </div>
+</body>
+
+</html>

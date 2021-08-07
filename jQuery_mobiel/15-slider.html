@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div role="main" class="ui-content">
+        <form>
+            <h1>기본 슬라이더</h1>
+            <label for="slider1">slider1</label>
+            <input type="range" id="slider1" min="0" max="100" value="20">
+            <br>
+
+            <h1>step</h1>
+            <label for="slider2">slider1</label>
+            <input type="range" id="slider2" min="0" max="100" value="0" step="10" data-highlight="true">
+            <br>
+
+            <h1>track theme</h1>
+            <label for="slider3">slider1</label>
+            <input type="range" id="slider3" min="0" max="100" value="0" data-highlight="true" data-track-theme="b">
+            <br>
+
+            <h1>범위</h1>
+            <div data-role="rangeslider">
+                <label for="slider4" class="ui-hidden-accessible">slider1</label>
+                <input type="range" id="slider4" min="0" max="100" value="20">
+                <label for="slider5">slider1</label>
+                <input type="range" id="slider5" min="0" max="100" value="80">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

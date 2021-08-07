@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-swipeleft</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <style>
+        .box{
+            width:100%;
+            height:200px;
+            background-color:skyblue
+        }
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(function(){
+            $(".box").on("swipe",function(e){
+                console.log(e.swipestart.coords[0],e.swipestop.coords[0]);
+                var start = e.swipestart.coords[0];
+                var stop = e.swipestop.coords[0];
+                //오른쪽에서 왼쪽으로 드래그를 하면 배경이 핑크로 변경
+                if(start-stop>0){
+                    $(this).css("background","pink")
+                }
+                //왼쪽에서 오른쪽으로 드래그하면 배경이 하늘로 변경
+                else{
+                    $(this).css("background","skyblue")
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>swipeleft</h1>
+    <p>마우스를 왼쪽으로 드래그하면 </p>
+    <div class="box"></div>
+</body>
+</html>

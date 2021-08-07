@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-flipswitch</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <style>
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <form action="">
+            <h1>기본 flipswitch</h1>
+            <input type="checkbox" data-role="flipswitch">
+            <hr>
+
+            <h1>text 변경 flipswitch</h1>
+            <input type="checkbox" data-role="flipswitch" data-on-text="000" data-off-text="111">
+            <hr>
+
+
+             <h1>on flipswitch</h1>
+            <input type="checkbox" data-role="flipswitch" data-on-text="000" data-off-text="111" checked>
+            <hr>
+
+            <h1>테마 flipswitch</h1>
+            <input type="checkbox" data-role="flipswitch" data-theme="b">
+            <hr>
+
+            <div>
+                <select name="" id="" data-role="flipswitch">
+                    <option value="on">off</option>
+                    <option value="off">on</option>
+                </select>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-button</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <style>
+        #wrap{
+            width:1000px;
+            margin:0 auto;
+        }
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>기본버튼</h1>
+        <a href="#" class="ui-btn">anchor</a>
+        <button class="ui-btn">button</button>
+        <input type="button" value="input">
+        <hr>
+
+        <h1>모서리 둥근 버튼</h1>
+        <a href="#" class="ui-btn ui-corner-all">anchor</a>
+        <button>button</button>
+        <input type="button" value="input">
+        <hr>
+
+        <h1>그림자 버튼</h1>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow">anchor</a>
+        <button>button</button>
+        <input type="button" value="input">
+        <hr>
+
+        <h1>인라인 버튼</h1>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">anchor</a>
+        <button class="ui-btn ui-btn-inline">button</button>
+        <hr>
+
+        <h1>테마 버튼</h1>
+        <a href="#" class="ui-btn ui-btn-a">anchor</a>
+        <a href="#" class="ui-btn ui-btn-b">anchor</a>
+
+        <button class="ui-btn ui-btn-a">button</button>
+        <button class="ui-btn ui-btn-b">button</button>
+        <hr>
+
+        <h1>mini 버튼</h1>
+        <a href="#" class="ui-btn ui-mini">anchor</a>
+        <button class="ui-btn ui-mini">button</button>
+        <hr>
+
+        <h1>아이콘 버튼</h1>
+        <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor</a>
+        <button class="ui-btn ui-icon-home ui-btn-icon-left">button</button>
+        <hr>
+
+        <h1>아이콘 위치</h1>
+        <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left">anchor</a>
+        <button class="ui-btn ui-icon-home ui-btn-icon-top">button</button>
+        <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-right">anchor</a>
+        <button class="ui-btn ui-icon-heart ui-btn-icon-bottom">button</button>
+        <hr>
+
+        <h1>아이콘 위치 인라인</h1>
+        <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-left ui-btn-inline">anchor</a>
+        <button class="ui-btn ui-icon-home ui-btn-icon-top ui-btn-inline">button</button>
+        <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-right ui-btn-inline">anchor</a>
+        <button class="ui-btn ui-icon-heart ui-btn-icon-bottom ui-btn-inline">button</button>
+        <hr>
+
+        <h1>아이콘만 있는 버튼</h1>
+        <a href="#" class="ui-btn ui-icon-heart ui-btn-icon-notext ui-corner-all">anchor</a>
+        <button class="ui-btn ui-icon-delete ui-btn-icon-notext">button</button>
+
+        <h1>input button</h1>
+        <input type="button" value="button">
+        <input type="submit" value="send">
+        <input type="reset" value="reset">
+
+        <h1>input button 아이콘</h1>
+        <input type="button" value="button" data-icon="delete" data-iconpos="notext">
+        <input type="submit" value="send" data-icon="mail">
+        <input type="reset" value="reset" data-icon="delete">
+
+        <h1>input button 인라인</h1>
+        <input type="button" value="button" data-icon="delete" data-iconpos="notext" data-inline="true">
+        <input type="submit" value="send" data-icon="mail" data-inline="true">
+        <input type="reset" value="reset" data-icon="delete" data-inline="true">
+
+        <h1>input button 테마</h1>
+        <input type="button" value="button" data-icon="delete">
+        <input type="submit" value="send" data-icon="mail" data-theme="a">
+        <input type="reset" value="reset" data-icon="delete" data-theme="b">
+
+        <h1>input button 아이콘 위치</h1>
+        <input type="button" value="button" data-icon="delete" data-iconpos="left">
+        <input type="submit" value="send" data-icon="mail" data-iconpos="top">
+        <input type="reset" value="reset" data-icon="delete" data-iconpos="right">
+        <input type="reset" value="reset" data-icon="delete" data-iconpos="bottom">
+
+    </div>
+</body>
+</html>

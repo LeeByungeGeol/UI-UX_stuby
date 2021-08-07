@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <style>
+        .wrap{
+            width:1000px;
+            margin:0 auto;
+        }
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>기본 collapsible</h1>
+        <div data-role="collapsible">
+            <h3>title</h3>
+            <p>오늘은 목요일, 저녁에 비온대요~~ </p>
+        </div>
+
+        <h1>기본 테마 collapsible</h1>
+        <div data-role="collapsible" data-theme="b" data-content-theme="b">
+            <h3>title</h3>
+            <p>오늘은 목요일, 저녁에 비온대요~~ </p>
+        </div>
+
+        <h1>펼쳐진 상태 </h1>
+        <div data-role="collapsible" data-collapsed="false">
+            <h3>family site</h3>
+            <ul>
+                <li><a href="#">family1</a></li>
+                <li><a href="#">family2</a></li>
+                <li><a href="#">family3</a></li>
+            </ul>
+        </div>
+
+        <h1>아이콘 변경 </h1>
+        <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+            <h3>family site</h3>
+            <ul data-role="listview">
+                <li><a href="#">family1</a></li>
+                <li><a href="#">family2</a></li>
+                <li><a href="#">family3</a></li>
+            </ul>
+        </div>
+
+
+        <h1>collapsible set</h1>
+        <div data-role="collapsibleset">
+            <div data-role="collapsible">
+                <h3>title1</h3>
+                <p>오늘은 목요일~</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>title2</h3>
+                <p>내일은 금요일~~~</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>title3</h3>
+                <p>주말에는 날이 쨍쨍~</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
