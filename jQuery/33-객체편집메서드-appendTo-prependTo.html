@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //.text3을 .text2 앞으로이동
+            $(".text3").prependTo(".text2");
+
+            //h1을 .text1뒤로 이동
+            $("h1").appendTo(".text1");
+        })
+    </script>
+
+</head>
+<body>
+    <h1>prependTo-appendTo</h1>
+    <p class="text1">첫번째ㅔ</p>
+    <p class="text2">두번째</p>
+    <p class="text3">세번째</p>
+</body>
+</html>

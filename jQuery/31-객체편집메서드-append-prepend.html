@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31-객체편집메서드-append-prepend</title>
+    <style>
+        h2{
+            background-color:aquamarine;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //h2 뒤에 안쪽에 "이곳은 뒤쪽"이라고 추가하기
+            $("h2").append("이곳은 뒤쪽!!!!");
+
+            //h2 앞에 안쪽에 "앞!!!" 이라고 추가하기
+            $("h2").prepend("앞!!!!");
+        })
+    </script>
+</head>
+<body>
+    <h1>객체편집메서드-append-prepend</h1>
+    <p>선택자 안쪽에 인라인으로 뒤 또는 앞에 내용을 추가할때 </p>
+
+    <h2>이곳이 기준</h2>
+</body>
+</html>

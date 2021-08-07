@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>63_mouse오른쪽버튼</title>
+    <style>
+        h1{
+            background-color: antiquewhite;
+        }
+        .bg{
+            background-color: dodgerblue;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //h1에 마우스 오른쪽 버튼을 클릭하면 bg클래스를 추가하고
+            $("h1").contextmenu(function(){
+                $(this).addClass("bg");
+            })
+            //click 이벤트가 발생하면 bg클래스를 제거하고
+            $("h1").click(function(){
+                $(this).removeClass("bg");
+            })
+        })
+    
+    </script>
+</head>
+<body>
+    <h1>contextmenu</h1>
+</body>
+</html>

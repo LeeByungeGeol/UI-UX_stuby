@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>62_mousedown_mouseup_mouseover</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+        }
+        .box3{
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".box1").mousedown(function(){
+                $(this).css("background","pink");
+            })
+            $(".box2").mouseup(function(){
+                $(this).css("background","skyblue");
+            })
+            $(".box3").mousemove(function(e){
+                console.log(e.clientX,e.type,e.currentTarget);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>mousedown</h1>
+    <div class="box1">box1</div>
+    <h1>mouseup</h1>
+    <div class="box2">box2</div>
+    <h1>mousemove</h1>
+    <div class="box3">box3</div>
+</body>
+</html>

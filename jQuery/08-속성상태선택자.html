@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-속성상태선택자</title>
+    <style>
+        .sTitle{display: none;}
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //숨겨진 속성을 가진 h2를 찾아여 보여라
+            $("h2:hidden").css("display","block");
+            //보여지고 있는 h1을 찾아서 숨겨라
+            $("h1:visible").css("display","none");
+            //select option중 선택된 옵션을 찾아서 value을 콘솔에 출력하기
+            console.log($("select>option:selected").val());
+            //input checked 속성을 가지는 요소의value값
+            console.log($("input:checked").val());
+        })
+    </script>
+
+</head>
+<body>
+    <h1 class="hTitle">숨겨질 제목</h1>
+    <h2 class="sTitle">보여질 제목</h2>
+
+    <select name="tel" id="tel">
+        <option value="010" >010</option>
+        <option value="011" selected>011</option>
+        <option value="016" >016</option>
+    </select>
+    <br>
+
+    <label for="box1">box1</label>
+    <input type="checkbox" id="box1" value="value1">
+    <label for="box2">box2</label>
+    <input type="checkbox" id="box2" value="value2"  checked>
+    <label for="box3">box3</label>
+    <input type="checkbox" id="box3" value="value3">
+
+</body>
+</html>

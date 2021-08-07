@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>66_event_keydownup_keypress</title>
+    <style>
+        .bg{
+            background-color: skyblue;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //.text1 키가 다운되면 bg클래스 추가되도록
+            $(".text1").keydown(function(){
+                $(this).addClass("bg");
+            })
+            $(".text1").keyup(function(){
+                $(this).removeClass("bg");
+            })
+            //.text2 키가 업되면 bg클래스가 추가되도록
+            $(".text2").keyup(function(){
+                $(this).addClass("bg");
+            })
+            
+            //text3 code, key, ketCode
+            $(".text3").keypress(function(e){
+                console.log(e);
+                console.log(e.key,e.keyCode);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>keydown</h1>
+    <input type="text" class="text1">
+    
+    <h1>keyup</h1>
+    <input type="text" class="text2">
+    
+    <h1>keypress</h1>
+    <input type="text" class="text3">
+</body>
+</html>

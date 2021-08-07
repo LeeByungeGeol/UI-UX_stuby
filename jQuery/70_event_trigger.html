@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>70_event_trigger</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var num=0;
+            //btnCLick을 클릭하면 span 안에 숫자가 1씩 증가하도록
+            $(".btnClick").on("click",function(){
+                num++;
+                $("span").text(num);
+            })
+            
+            //btnTrigger를 클릭하면 .btnClick에 click이벤트를 강제로 실행시키기
+            $(".btnTrigger").on("click",function(){
+                $(".btnClick").trigger("click");
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <h1>trigger</h1>
+    <span>0</span><br>
+    <button class="btnClick">click</button>
+    <button class="btnTrigger">trigger</button>
+</body>
+</html>

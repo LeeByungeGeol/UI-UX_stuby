@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_속성조작메서드</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // $("#book").prop("checked", "checked");
+            $("#book").prop("checked", true);
+            // $("#baby").prop("disabled", "disabled");
+            $("#baby").prop("disabled", true);
+        })
+    </script>
+</head>
+
+<body>
+    <h1>prop 설정하기</h1>
+    <p>checked, selected, disabled</p>
+    <label for="book">독서</label><input type="checkbox" id="book">
+    <label for="movie">영화</label><input type="checkbox" id="movie"><br>
+    <label for="adult">성인</label><input type="radio" id="adult" name="adult">
+    <label for="baby">미성년자</label><input type="radio" id="baby" name="adult">
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>76_event_resize</title>
+    <style>
+        .box{
+            width: 150px;
+            font-size: 50px;
+            background: pink;
+            position: fixed;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var wWidth = $(window).outerWidth();
+            $(".box").text(wWidth);
+            $(window).resize(function(){
+                wWidth= $(window).outerWidth();
+                $(".box").text(wWidth);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

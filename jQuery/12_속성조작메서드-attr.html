@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_속성조작메서드-attr</title>
+    <style>
+        .myImg>img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // 버튼을 클릭하면 .myImg>img src속성을 변경하기 sns_+05.jpg
+            // h1의 내용도 던킨샌드위치
+            // 선택자.onclick=function(){}
+            // 선택자 .addEventListener("이벤트타입",리스너함수(){})
+            $("button").click(function() {
+                $("h1").text("던킨 샌드위치");
+                // $(".myImg>img").attr("src", "images/sns_05.jpg");
+                // attr.({
+                //     "속성":값,
+                //     "속성":값
+                // })
+                $(".myImg>img").attr({
+                    "src": "images/sns_05.jpg",
+                    "alt": "던킨 샌드위치"
+                })
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <h1>이미지 속성 변경하기</h1>
+    <div class="myImg"><img src="images/sns_01.jpg" alt="맥머핀"></div>
+    <button>이미지 변경</button>
+</body>
+
+</html>

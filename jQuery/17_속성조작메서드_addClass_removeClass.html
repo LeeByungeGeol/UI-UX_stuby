@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_속성조작메서드_addClass_removeClass</title>
+    <style>
+        .bg {
+            background: pink;
+            color: white;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            //추가버튼을 클릭하면 css로 만들어놓은 .bg 클래스가 h1에 적용되도록
+            $("button:eq(0)").click(function() {
+                    $("h1").addClass("bg");
+                })
+                //제거버튼을 클릭하면 .bg클래스 제거
+            $("button:eq(1)").click(function() {
+                    $("h1").removeClass("bg");
+                })
+                //추가/제거 버튼을 클릭시 클래스 있으면 제거 없으면 추가
+            $("button:eq(2)").click(function() {
+                $("h1").toggleClass("bg");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>addClass removeClass</h1>
+    <button>추가</button>
+    <button>제거</button>
+    <button>추가/제거</button>
+</body>
+
+</html>

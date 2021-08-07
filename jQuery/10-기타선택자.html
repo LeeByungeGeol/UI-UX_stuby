@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-기타선택자</title>
+    <style>
+        p{
+            background-color:antiquewhite;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //p문장안에 "문장"이란 단어가 포함된 p를 찾아서 테두리
+            $("p:contains('문장')").css("border","1px dashed blue");
+
+            //p안에 strong을 찾아서 배경색
+            $("p:has(strong)").css("background","pink");
+
+            //p안에 strong 테그를 2px 초록으로
+            // $("p strong").css("border","2px solid green");
+            $("p").find("strong").css("border","2px solid green");
+
+            //내용이 빈 p를 찾아서 높이
+            $("p:empty").css("height","100px")
+
+        })
+    </script>
+
+</head>
+<body>
+    <h1>기타선택자</h1>
+    <p>단어를 포함하는 문장찾기</p>
+    <p class="text">포함하는 <strong>태그</strong> 요소 찾기</p>
+    <p>내용물 <span>문장</span> 찾기</p>
+    <p></p>
+    <div>
+        1
+        <strong>1111</strong>
+        <p>2
+            <span>3
+                <strong>4</strong>
+            </span>
+        </p>
+    </div>
+
+</body>
+</html>

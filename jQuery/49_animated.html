@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>49_animated</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: deeppink;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // 첫번째 버튼을 클릭하면 현재 위치에서 왼쪽으로 200씩 이동하기
+            $("button:first").click(function() {
+                    $("div").animate({
+                        "left": "-=200px"
+                    }, 2000)
+                })
+                // 마지막 버튼을 클릭하면 현재 위치에서 오른쪽으로 200씩 이동하기
+            $("button:last").click(function() {
+                    $("div").animate({
+                        "left": "+=200px"
+                    }, 2000)
+                })
+                // 두번째 버튼을 클릭하면 div가 애니메이션중인지 상태를 체크하여 콘솔에 출력하기
+            $("button:eq(1)").click(function() {
+                // div의 애니메이션 상태를 저장할 변수 만들기
+                var $status = $("div").is(":animated");
+                console.log($status);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button>left</button>
+    <button>animated</button>
+    <button>right</button>
+    <hr>
+    <div></div>
+</body>
+
+</html>

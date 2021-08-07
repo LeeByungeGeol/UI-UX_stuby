@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>65_마우스오른쪽금지</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+<!--
+    <script>
+         기본 이벤트 막기
+         자바스크립트
+        window.onload=function(){
+            document.querySelector(".text1").oncontextmenu(function(){
+                return false;
+            })
+        }
+    </script>
+-->
+    <script>
+        $(function(){
+            $(".text2").contextmenu(function(e){
+                //기본 이벤트를 막아주는 명령
+                //a #마우스 오른쪽 버튼
+                e.preventDefault();
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <h1>마우스 오른쪽 금지</h1>
+    <div class="text1" oncontextmenu="return false">자바스크립트</div>
+    <h1>마우스 오른쪽 금지</h1>
+    <div class="text2">jQuery</div>
+</body>
+</html>

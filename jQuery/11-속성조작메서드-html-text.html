@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-속성조작메서드-html-text</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //h1의 html값 얻어오기
+            console.log($("h1").html());
+            $("h1").html("<em>속성</em>");
+            //첫번째 h2의 내용물 
+            // console.log($("h2:first").text());
+            console.log($("h2:eq(0)").text());
+            $("h2:eq(1)").text("두번째문장")
+        })
+    </script>
+</head>
+<body>
+    <h1><strong>속성조작</strong></h1>
+    <h2>html <span>변경</span></h2>
+    <h2>text 변경</h2>
+</body>
+</html>

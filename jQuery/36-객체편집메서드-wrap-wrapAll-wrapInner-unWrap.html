@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36-객체편집메서드-wrap-wrapAll-wrapInner-unWrap</title>
+    <style>
+        div {
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        ol {
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            //wrap p를 div 태그로 감싸기
+            // $("p").wrap("<div>")
+            //wrapAll p를 div  태그로 감싸기
+            $("p").wrapAll("<div>");
+            //wrapInner li안쪽을 strong으로 감싸기
+            $("li").wrapInner("<strong>");
+
+                //
+                $("ol>li").unwrap();
+        })
+    </script>
+
+<body>
+    <h1>요소 감싸기</h1>
+    <p>요소들을 감쌀때 사용한다</p>
+
+    <h2>wrap</h2>
+    <p>각 요소 감싸기</p>
+
+    <h2>wrapInner</h2>
+    <p>안쪽 요소 감싸기</p>
+
+    <h2>wrapAll</h2>
+    <p>모아모아 감싸기</p>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+
+    <h2>unWrap</h2>
+    <p>부모 요소 제거하기</p>
+    <ol>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ol>
+</body>
+
+</html>

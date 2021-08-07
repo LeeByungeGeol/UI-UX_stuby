@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40_effect_slideUp_slideToggle</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            background-color: tomato;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // up버튼을 클릭하면 .box를 위로 줄어들도록
+            $(".up").click(function() {
+                $(".box").slideUp(1000);
+            })
+            $(".down").click(function() {
+                $(".box").slideDown(1000);
+            })
+            $(".toggle").click(function() {
+                $(".box").slideToggle(1000);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button class="up">slideUp</button>
+    <button class="down">slideDown</button>
+    <button class="toggle">slideToggle</button>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43-effect-fadeIn-fadeOut-fadeToggle-fadeTo</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            margin:10px;
+            background-color:deeppink;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(1)").click(function(){
+                $(".box1").fadeOut(1000);
+                $(".box2").fadeOut("fast");//fast, slow, normal
+            })
+            $("button:eq(0)").click(function(){
+                $(".box1").fadeIn(1000);
+                $(".box2").fadeIn("slow");
+            })
+
+            $("button:eq(2)").click(function(){
+                $(".box1,.box2").stop().fadeToggle(1000);
+            })
+            $(".box4").mouseover(function(){
+                $(this).fadeTo(500,0.5);
+            })
+            $(".box4").mouseout(function(){
+                $(this).fadeTo(500,1);
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <button>fadeIn</button>
+    <button>fadeOut</button>
+    <button>fadeToggle</button>
+    <button>fadeTo</button>
+</body>
+</html>

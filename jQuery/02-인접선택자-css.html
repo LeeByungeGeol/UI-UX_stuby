@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-인접선택자-css</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //다음 형제 h1바로 다음의 p를 선택하여 글자색 변경하기
+            $("h1 + p").css("color","pink");
+            //이후 선택자 글자크기 30
+            $("h1 ~ p").css("font-size","30px");
+            //ul의 메인 메뉴만 선택하여 배경색 주기 자식 선택자
+            $(".nav>li>a").css("background-color","green");
+            //.nav 후손으로 있는 a 글자색 변경
+            $(".nav a").css("color","orange");
+        })
+    </script>
+</head>
+<body>
+    <p>인접한 요소 선택하기</p>
+    
+    <h1>인접선택자</h1>
+    <p>css 인접선택자</p>
+
+    <p>자식선택자</p>
+    <p>후손 선택자</p>
+    <p>바로다음 형제</p>
+    <p>이후형제</p>
+
+    <ul class="nav">
+        <li>
+            <a href="#">menu1</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu2</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu3</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

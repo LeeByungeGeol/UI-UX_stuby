@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_ham_x</title>
+    <style>
+        .ham2>a,
+        .ham3>a {
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url(images/hamBtn.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        
+        .ham2>a.active,
+        .ham3>a.active {
+            background-image: url(images/icon_modal_close.png);
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/22_ham_x.js"></script>
+</head>
+
+<body>
+    <h1>attr</h1>
+    <div class="ham1">
+        <a href="#"><img src="images/hamBtn.png" alt=""></a>
+    </div>
+    <h1>toggleClass</h1>
+    <div class="ham2">
+        <a href="#"></a>
+    </div>
+    <h1>hasClass</h1>
+    <div class="ham3">
+        <a href="#"></a>
+    </div>
+</body>
+
+</html>

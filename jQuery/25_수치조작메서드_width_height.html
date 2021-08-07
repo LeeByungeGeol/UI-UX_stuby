@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25_수치조작메서드_width_height</title>
+    <style>
+        div {
+            width: 200px;
+            height: 300px;
+            border: 10px solid black;
+            padding: 20px 10px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // box width
+            var w = $(".box").width();
+            var iw = $(".box").innerWidth();
+            var ow = $(".box").outerWidth();
+            console.log("width" + w);
+            console.log(`inner width: ${iw}`);
+            console.log(`oute width: ${ow}`);
+
+            // .box height
+            var h = $(".box").height();
+            var ih = $(".box").innerHeight();
+            var oh = $(".box").outerHeight();
+            console.log("height " + h + " innerHeight " + ih + " outerHeight " + oh);
+        })
+    </script>
+</head>
+
+<body>
+    <h1>수치조작메서드-width-height</h1>
+    <div class="box"></div>
+</body>
+
+</html>

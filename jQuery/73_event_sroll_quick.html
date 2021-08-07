@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>73_event_sroll_quick</title>
+    <style>
+        .quick{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            font-size: 30px;
+            right: 10px;
+            top: 10px;
+            background-color: dodgerblue;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 원도우에서 스크롤이 움직이면 스크롤의 위치값을 받아와서
+            // .quick top으로 설정하기
+            $(window).scroll(function(){
+                var scrollY = $(this).scrollTop();
+                $(".quick").stop().animate({
+                    top:scrollY
+                },500)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="quick">quick</div>
+    <p>scroll1</p>
+    <p>scroll2</p>
+    <p>scroll3</p>
+    <p>scroll4</p>
+    <p>scroll5</p>
+    <p>scroll6</p>
+    <p>scroll7</p>
+    <p>scroll8</p>
+    <p>scroll9</p>
+    <p>scroll10</p>
+    <p>scroll11</p>
+    <p>scroll12</p>
+    <p>scroll13</p>
+    <p>scroll14</p>
+    <p>scroll15</p>
+    <p>scroll16</p>
+    <p>scroll17</p>
+    <p>scroll18</p>
+    <p>scroll19</p>
+    <p>scroll20</p>
+    <p>scroll21</p>
+    <p>scroll22</p>
+    <p>scroll23</p>
+    <p>scroll24</p>
+    <p>scroll25</p>
+    <p>scroll26</p>
+    <p>scroll27</p>
+    <p>scroll28</p>
+    <p>scroll29</p>
+    <p>scroll30</p>
+    <p>scroll31</p>
+    <p>scroll32</p>
+    <p>scroll33</p>
+    <p>scroll34</p>
+    <p>scroll35</p>
+    <p>scroll36</p>
+    <p>scroll37</p>
+    <p>scroll38</p>
+    <p>scroll39</p>
+    <p>scroll40</p>
+    <p>scroll41</p>
+    <p>scroll42</p>
+    <p>scroll43</p>
+    <p>scroll44</p>
+    <p>scroll45</p>
+    <p>scroll46</p>
+    <p>scroll47</p>
+    <p>scroll48</p>
+    <p>scroll49</p>
+    <p>scroll50</p>
+    <p>scroll51</p>
+    <p>scroll52</p>
+    <p>scroll53</p>
+    <p>scroll54</p>
+    <p>scroll55</p>
+    <p>scroll56</p>
+    <p>scroll57</p>
+    <p>scroll58</p>
+    <p>scroll59</p>
+    <p>scroll60</p>
+    <p>scroll61</p>
+    <p>scroll62</p>
+    <p>scroll63</p>
+    <p>scroll64</p>
+    <p>scroll65</p>
+    <p>scroll66</p>
+    <p>scroll67</p>
+    <p>scroll68</p>
+    <p>scroll69</p>
+    <p>scroll70</p>
+    <p>scroll71</p>
+    <p>scroll72</p>
+    <p>scroll73</p>
+    <p>scroll74</p>
+    <p>scroll75</p>
+    <p>scroll76</p>
+    <p>scroll77</p>
+    <p>scroll78</p>
+    <p>scroll79</p>
+    <p>scroll80</p>
+    <p>scroll81</p>
+    <p>scroll82</p>
+    <p>scroll83</p>
+    <p>scroll84</p>
+    <p>scroll85</p>
+    <p>scroll86</p>
+    <p>scroll87</p>
+    <p>scroll88</p>
+    <p>scroll89</p>
+    <p>scroll90</p>
+    <p>scroll91</p>
+    <p>scroll92</p>
+    <p>scroll93</p>
+    <p>scroll94</p>
+    <p>scroll95</p>
+    <p>scroll96</p>
+    <p>scroll97</p>
+    <p>scroll98</p>
+    <p>scroll99</p>
+    <p>scroll100</p>
+</body>
+</html>

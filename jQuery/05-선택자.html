@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>선택자</h1>
+
+    <h2>직접선택자</h2>
+    <p>전체선택자 $("*")</p>
+    <p>태그선택자 $("태그명")</p>
+    <p>클래스 선택자 $(".클래스명")</p>
+    <p>아이디 선택자 $("#아이디명")</p>
+    <p>다중선택자 $("선택자1,선택자2")</p>
+
+    <h2>인접선택자</h2>
+    <h3>형제선택자</h3>
+    <p>+ $("선택자+다음선택자")</p>
+    <p>~ $("선택자~이후선택자")</p>
+
+    <p>next,nextAll, nextUntil $("선택자").next() </p>
+    <p>preve, prevAll, prevUntil $("선택자").prev() </p>
+    <p>siblings $("선택자").siblings()</p>
+
+    <h3>조상선택자</h3>
+    <p>부모선택자 $("선택자").parent()</p>
+    <p>조상선택자 $("선택자").parents()</p>
+
+    <h3>자식선택자</h3>
+    <p> > $("부모선택자>자식선택자"></p>
+    <p>  $("조상선택자 후손선택자")</p>
+    <p>children $("부모선택자").children()</p>
+
+    <h3>closet</h3>
+    <p>closest 인접한 형제이거나 부모 찾기  $("선택자").closest("찾을요소")</p>
+    
+</body>
+</html>

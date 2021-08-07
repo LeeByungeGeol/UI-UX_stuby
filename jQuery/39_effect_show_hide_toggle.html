@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39-effect-show-hide-toggle</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            background-color: tomato;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            //show버튼을 클릭하면 box가 서서히 보이도록
+            $(".show").click(function() {
+                    $(".box").show("slow");
+                })
+                //hide버튼을 클릭하면 box가 서서히 사라지도록
+            $(".hide").click(function() {
+                    $(".box").hide("slow");
+                })
+                //toggle버튼을 클릭하면 반복
+            $(".toggle").click(function() {
+                $(".box").toggle("slow");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button class="show">show</button>
+    <button class="hide">hide</button>
+    <button class="toggle">toggle</button>
+</body>
+
+</html>

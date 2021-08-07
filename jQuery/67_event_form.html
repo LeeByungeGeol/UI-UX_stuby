@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>67_event_form</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/67_event_form.js"></script>
+</head>
+<body>
+    <h1>form event</h1>
+    <form id="myForm">
+        <label for="uName">이름</label>
+        <input type="text" id="uName"><br>
+        
+        <label for="uId">아이디</label>
+        <input type="text" id="uId"><br>
+        
+        <label for="address">주소</label>
+        <input type="text" id="address"><br>
+        
+        <label for="tel">전화번호</label>
+        <select name="tel" id="tel">
+            <option value="010">010</option>
+            <option value="011">011</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="018">018</option>
+            <option value="019">019</option>
+        </select>
+        
+        <input type="text" title="전화번호 두번쨰 자리">
+        
+        <input type="text" title="전화번호 세번쨰 자리"><br>
+        
+        <input type="submit" value="전송">
+        
+        <input type="reset" value="취소">
+        
+    </form>
+</body>
+</html>

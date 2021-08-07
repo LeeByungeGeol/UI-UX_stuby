@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21_toggleClass_hasClass</title>
+    <style>
+        .bg {
+            background: salmon;
+            color: white;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // .tBtn을 클릭하면 .tClass에 .bg클래스를 추가.제거
+            $(".tBtn").click(function() {
+                $(".tClass").toggleClass("bg");
+            })
+
+            // .hBtn을 클릭하면 .hClass에 .bg클래스가 있는지 없는지 체크하여 있으면
+            // 제거하고, 없으면 추가하기
+            $(".hBtn").click(function() {
+                var t = $(".hClass").hasClass("bg");
+                console.log(t);
+                if (t) {
+                    $(".hClass").removeClass("bg");
+                } else {
+                    $(".hClass").addClass("bg");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1 class="tClass">toggle Class</h1>
+    <button class="tBtn">toggle</button>
+    <h1 class="hClass">has Class</h1>
+    <button class="hBtn">has</button>
+</body>
+
+</html>

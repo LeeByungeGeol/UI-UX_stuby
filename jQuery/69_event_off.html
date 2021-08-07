@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>69_event_off</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // p에 마우스가 보더ㅚ면 배경이 바뀌도록하는 이벤트 등록하기
+            $("p").on("mouseover",function(){
+                $(this).css("background","pink");
+            })
+            
+            //화면의 해상도를 체크해서 767이상이면 오버이벤트가 적용되고, 이하면 p에 오버 이벤트가 적용되지 않도록
+            
+            //원도우의 너비값을 받아오기
+            var wWidth= $(window).outerWidth();
+            console.log(wWidth);
+            if(wWidth>767){
+                $("p").on("mouseover",function(){
+                    $(this).css("background","pink")
+                })  
+            }
+            else{
+                $("p").off("mouseover");
+            }
+        })
+        
+    </script>
+</head>
+<body>
+    <h1>event off</h1>
+    <p>이벤트 제거</p>
+</body>
+</html>

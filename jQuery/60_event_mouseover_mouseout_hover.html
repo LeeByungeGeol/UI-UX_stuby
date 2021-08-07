@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>60_event_mouseover_mouseout_hover</title>
+    <style>
+        .bg{
+            background-color: deeppink;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // .box1에 마우스가 오버되면 bg클래스를 적용하고
+            $(".box1").mouseover(function(){
+                $(this).addClass("bg");
+            })
+            // 마우스가 아웃되면 bg클래스가 제거된다.
+            $(".box1").mouseout(function(){
+                $(this).removeClass("bg");
+            })
+            // box2 -hover
+            //선택자.hover(function(){},function(){})
+            $(".box2").hover(function(){
+                $(this).addClass("bg");
+            },function(){
+                $(this).removeClass("bg");
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>mouseover,mouseout</h1>
+    <p class="box1">box1</p>
+    <h1>hover</h1>
+    <p class="box2">box2</p>
+</body>
+</html>

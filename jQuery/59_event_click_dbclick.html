@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>59_event_click_dbclick</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 첫번째 p를 클릭하면 배경을 pink
+            // 선택자. 이벤트타입 (fuction(){})
+            $("p:eq(0)").click(function(){
+                $(this).css("background","pink");
+            })
+            // 두번째 p를 더블클릭하면 배경을 skyblue
+            $("p:eq(1)").dblclick(function(){
+                $(this).css("background","skyblue");
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>move event click -dbClick</h1>
+    <p>click</p>
+    <p>dblclick</p>
+</body>
+</html>

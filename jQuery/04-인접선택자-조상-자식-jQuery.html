@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-인접선택자-조상-자식-jQuery    </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //p의 부모를 찾아서 테두리 주기
+            $("p").parent("div").css("border","1px solid red");
+            //p의 조상인 div를 차장서 테두리 주기
+            $("p").parents("div").css("border","2px solid green");
+            //.menu의 자식인 li를 찾아서 테두리 pink
+            // $(".menu>li").css("border","1px solid pink");
+            $(".menu").children("li").css("border","1px solid pink");
+
+            //.active에서 가장 인접한 ul을 찾아서 테둘 10
+            //부모이거나, 형제를 찾아라
+            $(".active").closest("ul").css("border","10px dashed #ccc");
+
+        })
+    </script>
+</head>
+<body>
+    <h1>조상부모찾기</h1>
+    <div>
+        <span>부모선택자</span>
+        <div>
+            <p>자식선택자</p>
+        </div>
+    </div>
+
+    <ul class="menu">
+        <li>
+            <a href="#">menu1</a>
+            <ul class="sub">
+                <li class="active"><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu2</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu3</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu4</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu5</a>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

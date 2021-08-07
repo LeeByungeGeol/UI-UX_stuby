@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26_수치조작메서드_position_offset</title>
+    <style>
+        #Wrap {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+            border: 1px solid black;
+            position: relative;
+        }
+        
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: salmon;
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // .box의 위치값 알아오기
+            // 기준 #wrap position
+            var pLeft = $(".box").position().left;
+            var pTop = $(".box").position().top;
+            $(".text1").text(`position left:${pLeft} top:${pTop}`);
+
+            // 기준 body offset
+            var oLeft = $(".box").offset().left;
+            var oTop = $(".box").offset().top;
+            $(".text2").text(`off left: ${oLeft} top:${oTop}`);
+        })
+    </script>
+</head>
+
+<body>
+    <div id="Wrap">
+        <div class="box"></div>
+    </div>
+    <div class="text1">hello</div>
+    <div class="text2"></div>
+</body>
+
+</html>

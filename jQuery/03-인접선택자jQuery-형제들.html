@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-인접선택자-jQuery-형제들</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //next,nextAll, nextUntil
+            //.menu3를 기준으로 바로 다음에 오는 형제를 하나 선택 글자색
+            $(".menu3").next().css("color","pink");
+            //.menu3를 기준으로 이후에 오는 모든 형제들을 글자크기를 30px
+            $(".menu3").nextAll().css("font-size","30px");
+            //.menu3을 기준으로 이후의 형제중 menu6까지만 밑줄
+            $(".menu3").nextUntil(".menu6").css("text-decoration","underline");
+
+            //prev, prevAll, prevUntil
+            //.list5를 기준으로 바로이전에 오는 형제를 하나 선택하여 밑줄
+            $(".list5").prev().css("text-decoration","underline");
+            //.list5을 기준으로 이전에 오는 모든 형제를 선택하여 글자색 green
+            $(".list5").prevAll().css("color","green");
+            //.list5을 기준으로 .list2까지 배경색 skyblue
+            $(".list5").prevUntil(".list2").css("background-color","skyblue");
+
+            //모든 형제들 선택하기
+            $(".me").siblings().css("background-color","pink");
+        })
+    </script>
+</head>
+<body>
+    <h1>이전형제</h1>
+    <ul class="menu">
+        <li class="menu1">menu1</li>
+        <li class="menu2">menu2</li>
+        <li class="menu3">menu3</li>
+        <li class="menu4">menu4</li>
+        <li class="menu5">menu5</li>
+        <li class="menu6">menu6</li>
+        <li class="menu7">menu7</li>
+    </ul>
+
+    <h1>이후형제</h1>
+    <ol class="list">
+        <li class="list1">list1</li>
+        <li class="list2">list2</li>
+        <li class="list3">list3</li>
+        <li class="list4">list4</li>
+        <li class="list5">list5</li>
+        <li class="list6">list6</li>
+        <li class="list7">list7</li>
+    </ol>
+
+    <h1>형제들</h1>
+    <ul>
+        <li>형제들1</li>
+        <li>형제들2</li>
+        <li>형제들3</li>
+        <li class="me">형제들4</li>
+        <li>형제들5</li>
+        <li>형제들6</li>
+        <li>형제들7</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>61_mouseout_mouseleave</title>
+    <style>
+        .parent{
+            width: 400px;
+            padding: 50px;
+            background-color: dodgerblue;
+            font-size: 30px;
+        }
+        .child{
+            height: 80px;
+            background-color: palevioletred
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/61_mouseout_mouseleave.js"></script>
+</head>
+<body>
+    <h1>mouse over_out</h1>
+    <div class="parent overOut">
+        <span>parent</span>
+        <span class="count">0</span>
+        <div class="child">
+            <span>child</span>
+        </div>
+    </div>
+    <h1>mouse end_leave</h1>
+    <div class="parent enterLeave">
+        <span>parent</span>
+        <span class="count">0</span>
+        <div class="child">
+            <span>child</span>
+        </div>
+    </div>
+</body>
+</html>

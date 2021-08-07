@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35-객체편집메서드-clone</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //ul의 자식인 li를 복사하여 ol 뒤에 붙이기
+            var obj = $(".list>li").clone();
+            $("ol").append(obj);
+            
+            //banner의 마지막자식을 복사하여 배너 처음에 붙이기
+            //banner의 첫번째 자식 배너의 마직막에 붙이기
+            var bLast = $(".banner>li:last").clone();
+            var bFirst = $(".banner>li:first").clone();
+
+            $(".banner").append(bFirst);
+            $(".banner").prepend(bLast);
+            
+
+        })
+    </script>
+</head>
+<body>
+    <h1>clone</h1>
+    <ul class="list">
+        <li><a href="#">list1</a></li>
+        <li><a href="#">list2</a></li>
+        <li><a href="#">list3</a></li>
+    </ul>
+
+    <ol>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>        
+    </ol>
+    <ul class="banner">
+        <li><a href="#">banner1</a></li>
+        <li><a href="#">banner2</a></li>
+        <li><a href="#">banner3</a></li>
+    </ul>
+</body>
+</html>

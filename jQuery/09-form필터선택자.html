@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-form필터선택자</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //input type=text 찾아서 테두리
+            $("input:text").css("border","2px solid blue");
+            //input type=passoword 배경
+            $("input:password").css("background","yellow");
+            //input type=checkbox 그 바로 다음에 오는 글자 배경
+            $("input:checkbox").next().css("background","pink")
+            //input type=file 배경을 purple
+            $("input:file").css("background","purple")
+            //input type=submit 배경을 흰색
+            $("input:submit").css("background","white");
+        })
+    </script>
+
+</head>
+<body>
+    <form name="myForm" id="myForm">
+        <label for="uName">이름</label>
+        <input type="text" id="uName"><br>
+        <label for="uPass">비밀번호</label>
+        <input  type="password" id="uPass"><br>
+        취미        
+        <input type="checkbox" id="movie">
+        <label for="movie">영화</label>
+        <input type="checkbox" id="book">
+        <label for="book">독서</label><br>
+        성별
+        <input type="radio" name="gender" id="man">
+        <label for="man">남자</label>
+        <input type="radio" name="gender" id="women">
+        <label for="women">여자</label> <br>
+        첨부파일
+        <label for="photo">사진</label>
+        <input type="file" id="photo"><br>
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+    </form>
+</body>
+</html>

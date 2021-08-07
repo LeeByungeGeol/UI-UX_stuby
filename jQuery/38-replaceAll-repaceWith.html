@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38-replaceAll-replaceWith</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //문자열.replace("찾을문자","바꿀문자");
+            //p를 strong로 바꾸면서 javascript로 변경하기
+            $("p").replaceWith("<strong>javascript</strong>");
+
+            //div를 em으로 jQuery로 변경
+            $("<em>jQuery</em>").replaceAll("div")
+        })
+    </script>
+</head>
+<body>
+    <h1>replaceAll</h1>
+    <p>jQuery</p>
+
+    <h1>replaceWith</h1>
+    <div>javascript!!!!!!!</div>
+</body>
+</html>

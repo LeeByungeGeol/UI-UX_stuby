@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29-객체편집메서드-after-before</title>
+    <style>
+        h2{
+            background-color:antiquewhite;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //h2뒤에 "after"라는 내용물 추가하기
+            $("h2").after("after");
+
+            //h2앞에 before 추가하기
+            $("h2").before("before");
+        })
+    </script>
+
+
+</head>
+<body>
+    <h1>객체편집메서스 after-before</h1>
+    <p>가상으로 요소를 뒤또는 앞에 블럭(?)으로 추가하고 싶을때 사용한다.</p>
+    <span>인라인요소</span>
+
+    <h2>이곳이 기준입니다.</h2>
+</body>
+</html>
