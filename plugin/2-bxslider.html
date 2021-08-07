@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-bxslider</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <style>
+        .listWrap{
+            width:1200px;
+            margin: 0 auto;
+        }
+        @media screen and (max-width:1200px){
+            .listWrap{
+                width:100%;
+            }
+        }
+       
+        #listBtn{
+
+        }
+        #listBtn .bx-pager-item{
+            display: inline-block;
+            margin:0 5px;
+        }
+        #listBtn .bx-pager-item>a{
+            display: block;
+            padding:5px 10px;
+            background-color: #ccc;            
+        }
+        #listBtn .bx-pager-item>a:hover,
+        #listBtn .bx-pager-item>a:focus,
+        #listBtn .bx-pager-item>a.active{
+            background-color: green;
+        }
+
+
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(function(){
+            $(".banner").bxSlider({
+                mode:"fade",
+                auto:true
+            });
+
+            $(".list").bxSlider({
+                minSlides:2,
+                maxSlides:4,
+                slideWidth:300,
+                moveSlides:1,
+                slideMargin:10,
+                pagerSelector:"#listBtn"
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul class="banner">
+        <li><a href="#"><img src="images/banner01.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/banner02.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/banner03.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/banner04.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/banner05.jpg" alt=""></a></li>
+    </ul>
+
+    <div class="listWrap">
+        <ul class="list">
+            <li><img src="images/_01.jpg" alt=""></li>
+            <li><img src="images/_02.jpg" alt=""></li>
+            <li><img src="images/_03.jpg" alt=""></li>
+            <li><img src="images/_04.jpg" alt=""></li>
+            <li><img src="images/_05.jpg" alt=""></li>
+            <li><img src="images/_06.jpg" alt=""></li>
+            <li><img src="images/_07.jpg" alt=""></li>
+            <li><img src="images/_08.jpg" alt=""></li>
+        </ul>
+        <ul id="listBtn">
+            <li><a href="#" data-slide-index="0">1</a></li>
+            <li><a href="#" data-slide-index="1">2</a></li>
+            <li><a href="#" data-slide-index="2">3</a></li>
+            <li><a href="#" data-slide-index="3">4</a></li>
+            <li><a href="#" data-slide-index="4">5</a></li>
+            <li><a href="#" data-slide-index="5">6</a></li>
+            <li><a href="#" data-slide-index="6">7</a></li>
+            <li><a href="#" data-slide-index="7">8</a></li>
+        </ul>
+    </div>
+</body>
+</html>
