@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-직접선택자</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //모든 요소를 선택하여 글자색을 pink로 변경하기
+            $("*").css("color","pink");
+            //태그 선택자 p만 선택해서 글자색을 초록으로
+            $("p").css("color","green");
+            //클래스 선택자 .text로 밑줄
+            $(".text").css("text-decoration","underline");
+            //아이디 선택자 #idText를 찾아 글자 크기 30px
+            $("#idText").css("font-size","30px");
+            //.text에 multi 를 선택하여 배경색 주기
+            $(".text,.multi").css("background-color","#ccc");
+
+        })
+    </script>
+
+</head>
+<body>
+    <h1>jQuery 선택자</h1>
+    <h2>직접선택자</h2>
+    <p>전체 선택자</p>
+    <p>태그 선택자</p>
+    <p class="text">클래스 선택자</p>
+    <p id="idText">아이디 선택자</p>
+    <p class="multi">다중 선택자</p>
+
+</body>
+</html>

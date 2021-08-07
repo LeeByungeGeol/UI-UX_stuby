@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-multi-page</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <!-- 메인 -->
+    <div data-role="page" id="main">
+        <div data-role="header">logo</div>
+        <div role="main" class="ui-content">
+            메인 본문
+            <p><a href="#sub" data-transition="flip">서브페이지연결</a></p>
+        </div>
+        <div data-role="footer">하단</div>
+    </div>
+
+    <!-- 서브 -->
+    <div data-role="page" id="sub">
+        <div data-role="header">logo</div>
+        <div role="main" class="ui-content">서브의 본문
+            <p><a href="#main" data-transition="flip" data-direction="reverse">index가기</a></p>
+        </div>
+        <div data-role="footer">하단</div>
+    </div>
+</body>
+</html>

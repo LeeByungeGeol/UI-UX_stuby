@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<school>
+    <student>
+        <name>홍길동</name>
+        <grade>1학년</grade>
+        <class>2반</class>
+    </student>
+    <student>
+        <name>기철수</name>
+        <grade>1학년</grade>
+        <class>2반</class>
+    </student>
+    <student>
+        <name>가가가</name>
+        <grade>1학년</grade>
+        <class>2반</class>
+    </student>
+</school>
