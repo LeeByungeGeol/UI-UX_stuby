@@ -1,0 +1,27 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_imgmap</title>
+</head>
+<body>
+    <h1>imgmap</h1>
+    <img src="images/imgmap.gif" alt=""usemap="#mymap">
+    <!-- 이미지를 클릭하여 링크로 이동해보자! -->
+    <!-- map태그는 클라이언트 사이드 이미지맵(client-side image-map)을 정의할 때 사용 -->
+    <map name="mymap" id="mymap">
+        <!-- 좌표값은 포토샵에서 f8(window->info)을 누르면 좌표값을 마우스를 통해 알수 있다. -->
+        <area shape="rect" coords="2,9,95,139" href="https://naver.com" alt="네이버와 연결되는 영역이다.">
+        <!-- shape모형(rect=사각형) coords좌표 href어디링크를 넣을것이냐? alt임시이름 -->
+        <!-- coords는 사각형은 왼쪽위 모서리, 오른쪽아래 모서리"x좌표,y좌표,x좌표,y좌표 이다"-->
+        <area shape="circle" coords="226,92,42" href="http://daum.net" alt="다음과 연결되는 영역이다.">
+        <!-- circle=원형 "(원의중심)x좌표,y좌표,반지름길이"-->
+        <area shape="poly" coords="248,156,282,161,290,182,272,190,260,205,231.185,240.162" href="http://google.com" alt="구글과 연결되는 영역이다.">
+        <!-- poly=다각형 좌표는 꺽이는부분을 다써줘야한다.-->
+    </map>
+
+</body>
+</html>

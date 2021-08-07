@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_글자관련태그</title>
+</head>
+
+<body>
+    <h1>글자 강조</h1>
+    <h2>글자를 굵게</h2>
+    <p>b(bold) 글자를 굵게 -<b>굵게</b> </p>
+    <p>strong 굵게(html5에서 권장) -<strong>굵게</strong></p>
+    <h2>글자 기울기</h2>
+    <p>em(empahasie) 글자를 기울게(html5에서 권장) -<em>기울기</em></p>
+    <p>i 글자를 기울기-<i>기울기</i>: 아이콘</p>
+    <hr>
+    <h1>글자를 추가/삭제</h1>
+    <h2>글자 추가하기</h2>
+    <p>추가하기 <ins>1000</ins></p>
+
+    <h2>글자 삭제하기</h2>
+    <p>글자 삭제하기 <del>1000</del></p>
+
+    <h1>인용문</h1>
+    <h2>짧은글 인용</h2>
+    <!-- 출저는 cite태그로 쓴다. q는 ""가 넣어지는 짧은 글을 인용할때 유용하다. -->
+    <p>짧은글 소크라테스가 말하길<q cite="네이버백과사전">너 자신을 알라</q>라고 말했다.</p>
+    <q cite="네이버백과사전">너 자신을 알라</q>
+
+    <h2>긴글 인용</h2>
+    <!-- blockquote는 긴글을 인용할때 유용하다 긴글은 앞에 여백을 남기고 보여진다. -->
+    <p>소크라테스가 말하길</p>
+    <blockquote cite="구글워키즈">내가 아는 단 한 가지는 내 자신이 무지하다는 사실 그것뿐이다.</blockquote>
+    <hr>
+
+    <h1>위첨자/아래첨자</h1>
+
+    <h2>위첨자</h2>
+    <p>52-5<sup>2</sup></p>
+
+    <h2>아래첨자</h2>
+    <p>H20-H<sub>2</sub>0</p>
+    <hr>
+
+    <h1>축약어- abbreviation</h1>
+    <!-- 마우스를 문구에 위치시키면 "안에 있는 문구가 뜬다." -->
+    <p><abbr title="world wide web">www</abbr></p>
+    <p><abbr title="world wide web consortium">w3c</abbr></p>
+    <hr>
+
+    <h1>큰글자 작은글자</h1>
+    <h2>작은 글자</h2>
+    <p>작은글자 <small>작은글자</small></p>
+
+    <h2>큰글자</h2>
+    <p>큰글자 <big>큰글자</big>- html5에서 제거가 되었다.</p>
+    <!-- big태그는 css에서 사용하고 있어서 html5에서 제거가 되었다. -->
+
+    <h1>하이라이트 - 배경에 색상</h1>
+    <!-- 글자 배경색상에 노란색으로 강조가 되었다. -->
+    <p>배경에 <mark>색상</mark> </p>
+    <hr>
+
+    <h1>키보드글자</h1>
+    <!-- key borad의 약자로 kbd의 태그를 이용하여 키보디 키라는것을 강조한다. -->
+    <p>alt <kbd>alt</kbd></p>
+    <hr>
+
+    <h1>작품의 제목</h1>
+    <!-- 약간 기울여져서 나오게 된다. -->
+    <cite>밀레의 종</cite>
+
+    <h1>단어를 정의</h1>
+    <!-- deginition의 약자로 써서 마우스를 단어에 이동시키면 ""안에 뒤에 나오는 단어의 정의를 해준다.-->
+    <p><dfn title="hyper text markup language로 홈페이지의 구조를 나타낸다">html</dfn></p>
+    <hr>
+    <h1>루비문자</h1>
+    <!-- span태그에서는 단어를 입력하고 rt태그에는 글자에 대한 부연 설명을 넣어 단어위에 표시하게끔 해준다. -->
+    <p>
+        <ruby>
+            <!-- span태그안에 大韓民國을 입력해도 되고 없이 입력해도 된다. -->
+            大韓民國
+            <rt>대한민국</rt>
+        </ruby>
+    </p>
+    <hr>
+
+    <h1>특수문자</h1>
+    <!-- &nbsp;로 빈칸을 띄울 수 있다. -->
+    <p>빈칸 빈 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;칸</p>
+    <p> & 그리고& &and - &amp; </p>
+    <p> > &gt; </p>
+    <!-- >는 오류가 뜨므로 &gt을 입력해주어야한다. -->
+    <p>
+        < &lt; </p>
+            <!-- <는 오류가 뜨므로 &lt을 입력해주어야한다. -->
+            <p> &copy; </p>
+            <!-- © (저작권) -->
+            <p> &middot; </p>
+            <!-- ·  -->
+            <hr>
+
+</body>
+
+</html>

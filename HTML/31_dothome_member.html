@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31_dothome_member</title>
+    <style>
+        fieldset {
+            width: 750px
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <p>*는 필수 입력 사항입니다.</p>
+        <fieldset>
+            <legend><strong>로그인 정보 입력</strong></legend>
+
+            <table>
+                <tr>
+                    <th>*아이디</th>
+                    <!-- placeholder은 빈칸에 입력하기 전에 있던 문구를 넣을수 있다. -->
+                    <td><input type="text" placeholder="아이디를 입력(필수)"></td>
+                    <td><input type="button" value="중복확인"></td>
+                </tr>
+                <tr>
+                    <th>*비밀번호 </th>
+                    <td><input type="text" placeholder="비밀번호를 입력해주세요("></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>*비밀번호확인</th>
+                    <td><input type="text" placeholder="비밀번호를 입력해주세요("></td>
+                    <td></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend><strong>회원 정보 입력</strong></legend>
+            <table>
+                <tr>
+                    <th>*이름(회사명)</th>
+                    <td><input type="text" placeholder="이름(회사명)을 입력해주세요"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p><strong>*회사명기입시 체크사항</strong><br><br>
+                            -국내 상호는 특수문자 ()괄호만 입력이 가능합니다. <br>
+                            -국외 상호인 경우 반드시 영문으로 입력해수에요 <br>
+                            -국외 상호는 특수문자&*'_"만 입력이 가능합니다. <br></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="phone">*연락처</label></th>
+                    <td>
+                        <input type="tel" placeholder="연락처(필수)" size="4" maxlength="4" pattern="[0-9]{3}" id="phone">-
+                        <input type="tel" placeholder="연락처(필수)" size="4" maxlength="4" pattern="[0-9]{4}"
+                            title="phone두번째자리">-
+                        <input type="tel" placeholder="연락처(필수)" size="4" maxlength="4" pattern="[0-9]{4}"
+                            title="phone세번째자리">
+                    </td>
+
+                </tr>
+                <tr>
+                    <th><label for="email">*이메일</label></th>
+                    <td>
+                        <input type="email" pattern="[a-z A-Z 0-9]+@+[a-z A-Z 0-9]+\.[a-z]{2,}$" id="email">
+                        <select title="url의 예를든 주소다" name="url">
+                            <option value="http://google.com">google.com</option>
+                            <option value="http://naver.com">naver.com</option>
+                            <option value="http://daum.net">daum.net</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend><label for="event"><strong>상품 및 이벤트 정보 수신 동의</strong></label></legend>
+            <p>서비스만료 및 서비스정보에 관련된 내용은 수신동의 여부와 관계없이 발송됩니다.</p>
+            <label><input type="checkbox" id="event" checked>이메일</label>
+            <label><input type="checkbox" title="event체크" checked> 문자</label>
+        </fieldset>
+        <fieldset>
+            <legend><label for="time"><strong>휴면전환 기간</strong></label></legend>
+            <p>이 조건에 따라 계정을 휴먼 전환 함으로써 고객님의 소중한 개인정보를 안전하게 관리합니다.</p>
+            <label><input type="checkbox" id="time">1년</label>
+            <label><input type="checkbox" checked>탈퇴시까지</label>
+        </fieldset>
+        <p><input type="text" placeholder="보안문자를 입력해주세요."> <br> </p>
+        <input type="submit" value="가입하기">
+    </form>
+</body>
+
+</html>

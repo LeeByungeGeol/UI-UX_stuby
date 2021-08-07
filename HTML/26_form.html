@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26_form</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <!-- form은 입력이 필요하거나 암호화가 필요한것에 사용한다. 
+        예를 들어 로그인을 할때 비밀번호같은 것을 어디에도 표기하지 않게끔 한다. -->
+    <form name="myform" method="GET">
+    
+        <label>이름</label>
+        <!-- uName은 이름을 입력하지 않을시 초깃값으러 저장되는 값이다. 홍길동은  처음에 표시된다.-->
+        <input type="text" value="홍길동" name="uName"><br>
+
+        <label>아이디</label>
+        <!-- placeholder은 좀더 투명한색으로 처음에 표시된다. 글자를 입력하면 사라짐 -->
+        <input type="text" name="uId" placeholder="이메일 또는 아이디"><br>
+
+        <label>비밀번호 <input type="password"></label> <br>
+
+        <span>
+            <!-- span태그는 다른부분과 관련이 없는 부분일때 쓴다. 
+                (나중에 디자인할수도 있으니 묶어준다.)-->
+            성별
+        </span>
+        <!-- label이랑 input이랑 따로 설정해두면 연결이 잘안된다. for이나 하나로 묶자. 
+        for로 label을 정해주고 id를 넣어 이것과 연관이 있다고 연결해준다.-->
+        <label for="man">남자</label>
+        <input type="radio" id="man" name="gender">
+        <label for="women">여자</label>
+        <input type="radio" id="women" name="gender"> <br>
+        <!-- name은 하나하나 각각 선택해야 해서 이름이 같다. -->
+
+        <span>취미</span>
+        <label>헬스<input type="checkbox" name="gym"></label>
+        <label>수영<input type="checkbox" name="swim"></label>
+        <label>요리<input type="checkbox" name="cook"></label> <br>
+
+        <label>사진 <input type="file"></label><br>
+
+        <label for="phone">전화번호</label>
+        <!-- title은 시각장애인을 위해 사용한다. size는 칸의 크기를 정할 수 있다. 
+            maxlength는 입력할수있는 글자/숫자를 정할 수 있다.-->
+        <input type="text" id="phone" title="전화번호 첫번째 자리" size="4" maxlength="4"> -
+        <input type="text" title="전화번호 두번째 자리" size="4" maxlength="4"> -
+        <input type="text" title="전화번호 세번째 자리" size="4" maxlength="4"> <br>
+
+        <input type="submit" value="회원가입">
+        <!-- 눌렀을때 보여지는 값 -->
+        <input type="reset" value="취소">
+        <!-- 취소할때 보여지는 값 -->
+        <button>일반버튼</button>
+        <input type="image" src="images/th.jpg" alt="전송">
+    </form>
+    <h1>select</h1>
+    <form>
+        <label for="tel">전화번호</label>
+        <!-- select는 option의 목록에서 선택할수 있는 태그이다. 
+            value값에 초기값을 넣어서 010을 눌러 010이 출력이 되도록 한다. -->
+        <select id="tel">
+            <option value="010">010</option>
+            <option value="011">011</option>
+            <option value="019">019</option>
+            <option value="02">02</option>
+            <option value="032">032</option>
+        </select> -
+        <input type="text" size="4" maxlength="4"> -
+        <input type="text" size="4" maxlength="4"> <br>
+        <label>기타 <textarea cols="60" rows="7"></textarea></label>
+        <!-- textarea는 몇칸 몇줄로 입력을 할것이냐를 정할수 있다. -->
+    </form>
+</body>
+</html>

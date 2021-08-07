@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_줄합치기</title>
+    <style>
+        table,tr,td,th{border: 1px solid blue}
+    </style>
+</head>
+<body>
+    <h1><b>줄합치기</b></h1>
+    <p>4줄 4칸 테이블 만들기</p>
+    <table>
+        <!-- 행이나 열을 합칠때 우선은 전부다 쓰고 나중에 지우는 식으로 하는게 편하다. -->
+        <tr>
+            <!-- rowspan태그를 이용하여 열을 합쳐라 ""안에는 몇개의 열을 합칠지 입력하면 된다. -->
+            <th rowspan="4">영화제목</th>
+            <td rowspan="2">5관</td>
+            <td>1:00</td>         
+        </tr>
+        <tr>
+            <td>2:00</td>          
+        </tr>
+        <tr>
+            <td rowspan="2">6관</td>
+            <td>11:00</td>           
+        </tr>
+        <tr>
+            <td>3:00</td>
+        </tr>
+    </table>   
+</body>
+</html>

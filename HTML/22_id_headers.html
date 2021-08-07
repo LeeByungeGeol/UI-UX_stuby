@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_id_headers</title>
+    <style>
+        table,tr,th,td{border: 1px solid black}
+    </style>
+</head>
+<body>
+    <!-- 시각장애인들을 위해서 잘 이해할수 있도록 들려주기 위해서 요약을 잘해서 나레이션으로 안내해준다. -->
+    <h1>줄 그룹화</h1>
+    <table>
+        <!-- thead는 제목부분으로 
+            예를 들어 2011년을 읽을때 2011년에 신청사이트수는 250 인증사이트수는 125 합격률은 50%이다. 라고 읽어준다. -->
+        <thead>
+            <tr>
+                <th id="year">연도</th>
+                <th id="site1">신청 사이트수</th>
+                <th id="site2">인증 사이트수</th>
+                <th id="pass">합격률</th>
+            </tr>
+        </thead>
+        <!-- tfoot는 시각적으로는 맨 끝에 넣어주지만 나레이션으로 읽어줄때는 이 내용을 먼저 읽어준다. -->
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <td>1000</td>
+                <td>700</td>
+                <td>70%</td>
+            </tr>
+        </tfoot>
+        <!-- tr*4>th*1td*3, tr*4>th+td*3 -->
+        <!-- tbody는 쓰지 않아도 자동으로 브라우저가 추가해서 넣어준다. -->
+        <tbody>
+            <tr>
+                <th id="y2011">2011년</th>
+                <td headers="y2011 site1">250</td>
+                <td headers="y2011 site2">125</td>
+                <td headers="y2011 pass">50%</td>
+            </tr>
+            <tr>
+                <th id="y2012">2012년</th>
+                <td headers="y2012 site1">300</td>
+                <td headers="y2012 site2">100</td>
+                <td headers="y2012 pass">33.3%</td>
+            </tr>
+            <tr>
+                <th id="y2013">2013년</th>
+                <td headers="y2013 site1">150</td>
+                <td headers="y2013 site2">90</td>
+                <td headers="y2013 pass">90%</td>
+            </tr>
+            <tr>
+                <th id="y2014">2014년</th>
+                <td headers="y2014 site1">300</td>
+                <td headers="y2014 site2">300</td>
+                <td headers="y2014 pass">100%</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

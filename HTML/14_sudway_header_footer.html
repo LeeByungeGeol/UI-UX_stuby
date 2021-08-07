@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_sudway_header_footer</title>
+</head>
+
+<body>
+    <!-- div태그는 모든태그를 다 넣을수 있다. 넣어도 표시가 잘 안난다. 나중에 디자인부분을 할떄 필요하다. -->
+    <!-- 마크업하는 순서는 위에서부터 아래로 왼쪽에서 오른쪽으로 한다. more는 보통 마지막에 한다. -->
+    <!-- 블록을 넣고 안에 인라인을 넣는다. -->
+    <!-- header 영역 (상단)-->
+    <div>
+        <h1><a href="#"><img src="images/logo_w.png" alt="subway logo"></a></h1>
+        <ul>
+            <!-- ul의 자식으로는 li만 올수있다. -->
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#"><img src="images/icon_utill_global.png" alt="영문사이트"></a></li>
+        </ul>
+        <ul>
+            <!-- li*6>a li의 자식으로 a도 넣어라(6개씩)->tab키 ,alt키를 클릭하고 줄을 고르면 중복으로 입력이 가능하다.-->
+            <li><a href="#">메뉴소개</a>
+                <!-- ul>li*6>a -->
+                <ul>
+                    <!-- 블록안에 복사를 해서 alt로 문단을 다 선택후 붙여넣기하면 그대로 붙여넣어진다. -->
+                    <li><a href="#">샌드위치</a></li>
+                    <li><a href="#">랩ㆍ기타</a></li>
+                    <li><a href="#">찹샐러드</a></li>
+                    <li><a href="#">아침메뉴</a></li>
+                    <li><a href="#">스마일 썹</a></li>
+                    <li><a href="#">단체메뉴</a></li>
+                </ul>
+            </li>
+            <li><a href="#">이용방법</a>
+                <!-- ul>li*4>a[href="#"] -->
+                <ul>
+                    <li><a href="#">써브웨이 이용방법</a></li>
+                    <li><a href="#">단체메뉴 이용방법</a></li>
+                    <li><a href="#">신선한 재료 소개</a></li>
+                    <li><a href="#">App 이용방법</a></li>
+                </ul>
+            </li>
+            <li><a href="#">새소식</a>
+                <ul>
+                    <li><a href="#">이벤트ㆍ프로모션</a></li>
+                    <li><a href="#">뉴스ㆍ공지사항</a></li>
+                    <li><a href="#">광고영상</a></li>
+                </ul>
+
+            </li>
+            <li><a href="#">써브웨이</a>
+                <ul>
+                    <li><a href="#">써브웨이 역사</a></li>
+                    <li><a href="#">써브웨이 약속</a></li>
+                    <li><a href="#">샌드위치 아티스트 지원</a></li>
+                    <li><a href="#">매장찾기</a></li>
+                </ul>
+            </li>
+            <li><a href="#">가맹점</a>
+                <ul>
+                    <li><a href="#">써브웨이 프랜차이즈</a></li>
+                    <li><a href="#">가맹관련 FAQ</a></li>
+                    <li><a href="#">가맹신청ㆍ문의</a></li>
+                    <li><a href="#">지사안내</a></li>
+                    <li><a href="#">사업설명회</a></li>
+                </ul>
+            </li>
+            <li><a href="#">온라인주문</a>
+                <ul>
+                    <li><a href="#">FAST-SUB</a></li>
+                    <li><a href="#">HOME-SUB</a></li>
+                    <li><a href="#">단체주문</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <!-- footer 영역 (하단메뉴)-->
+    <div>
+         <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">써브카드</a></li>
+            <li><a href="#">점주관리자</a></li>
+            <li><a href="#">Subway Listens</a></li>
+        </ul>
+        <address>
+            <p>서울시 서초구 강남대로 535 프린스빌딩 15층 대표 : 콜린클락 전화 : 02-797-5036 사업자등록번호 : 101-84-04143</p>
+            <p>SUBWAY® is a Registered Trademark of Subway IP LLC. © 2021 Subway IP LLC. All Rights Reserved.</p>
+        </address>
+
+        <ul>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">facebook</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

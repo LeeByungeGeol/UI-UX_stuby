@@ -1,0 +1,66 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20_행열합치기</title>
+    <style>
+        table,tr,td,th{border: 1px solid brown}
+    </style>
+</head>
+<body>
+    <h1>줄 / 칸 합치기</h1>
+    <table>
+        <!-- 합치라고 하면 후에 나오는 칸들은 반드시 지워줘야한다.(밀려나는거 방지) -->
+        <tr>
+            <th colspan="2"> 구분</th>
+            <th>교육내용</th>
+        </tr>
+        <tr>
+            <td rowspan="3">기본과정</td>
+            <td>1차시</td>
+            <td></td>        
+        </tr>
+        <tr>          
+            <td>2차시</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3차시</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="3">심화과정</td>
+            <td>1차시</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2차시</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3차시</td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <hr>
+    <table>
+        <tr>
+            <th colspan="2" rowspan="2">1</th>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+</body>
+</html>

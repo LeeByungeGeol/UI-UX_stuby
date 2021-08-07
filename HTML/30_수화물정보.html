@@ -1,0 +1,66 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30_수화물정보</title>
+    <style>
+        table,tr,td,th {border: 1px solid black}
+    </style>
+</head>
+<body>
+    <h1>수화물정보</h1>
+    <form>
+        <table>
+            <tr>
+                <th colspan="2">추가정보</th>
+            </tr>
+            <tr>
+                <th> <label for="pNum">패키지 수량</label></th>
+                <td><input type="number" id="pNum" name="pNum"></td>
+            </tr>
+            <tr>
+                <th>패키지수량이 맞습니까?</th>
+                <td>
+                    <label><input type="radio" name="yesNo"> 예</label>
+                    <label><input type="radio" name="yesNo"> 아니오</label>
+                    <!-- lavel안에 같이 넣었기때문에 하나만 선택이 된다. -->
+                </td>
+            </tr>
+            <tr>
+                <th><label for="weight">패키지별 무게</label></th>
+                <td>
+                    <input type="text" id="weight" pattern="[0-9]{1,2}" name="weight" required>
+                    <!-- required은 이 입력란이 필수요소이여서 작성하라는 문구가 뜬다. -->
+                    <select title="패키지별무게의 단위를 선택하세요" name="unit">
+                    <option value="kg">kg</option>
+                    <option value="g">g</option>
+                </select><br>
+                <label><input type="checkbox" checked>FedEx 고객번호를 사용하여 발송</label>
+                <!-- checked 처음부터 체크가 되어있도록 하기위해 -->
+                </td>
+            </tr>
+            <tr>
+                <th><label>픽업/방문접수</label></th>
+                <td>
+                    <select id="pv" name="pv">
+                        <!-- id는 웹페이시에서 사용하는 것 name은 나중에 스크립스에서 사용하는 것
+                        둘이 같은 이름을 가질수 있다. -->
+                        <option value="픽업">픽업</option>
+                        <option value="방문">팡문</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="sendDate">발송날짜</label></th>
+                <td><input type="date" id="sendDate"></td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="빠른견적받기"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
