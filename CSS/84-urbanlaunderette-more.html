@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>84-urbanlaunderette-more</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .more{
+            background-color:#ddd;
+        }
+        .more>a{
+            display: block;
+            line-height: 48px;
+            font-size:13px;
+            color:#333;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .more>a>span{
+            float:left;
+            margin-right:10px;
+           
+        }
+        .more>a>div{
+            float:left;
+            position:relative;
+            padding-right:20px;
+        }
+        .more>a .arrow{
+            position:relative;
+            z-index: 10;
+        }
+        .more>a .hexagon{
+            position:absolute;
+            right:0;
+        }
+        .more>a .hexagon>img{
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .more>a:hover .hexagon>img{
+            opacity: 1;
+            animation-name: hexaAni;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes hexaAni{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="more">
+        <a href="#">
+            <span>view more</span>
+            <div class="heArrow">
+                <span class="arrow"><img src="images/iconmonstr-arrow-right-thin-48.png" alt=""></span>
+                <span class="hexagon"><img src="images/iconmonstr-shape-23-48.png" alt=""></span>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

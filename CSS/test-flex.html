@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        body {
+            height: 700px;
+
+        }
+
+        .view {
+            margin: 50px auto;
+            width: 500px;
+            height: 250px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        #wrap {
+            width: 500px;
+            margin: 0px auto;
+            height: 700px;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: antiquewhite;
+            transform: translateY(-225px);
+/*            1개 반 높이 만큼 이동*/
+        }
+        #wrap>div {
+            width: 300px;
+            height: 150px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        #wrap>div>span {
+            display: block;
+            height: 100%;
+            background: pink;
+        }
+        #wrap>.on {
+            padding: 0;
+        }
+        #wrap>.on>span {
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="view">
+        <div id="wrap">
+            <div class="box1"><span>box1</span></div>
+            <div class="box2"><span>box2</span></div>
+            <div class="box3 on"><span>box3</span></div>
+            <div class="box4"><span>box4</span></div>
+            <div class="box5"><span>box5</span></div>
+        </div>
+    </div>
+</body>
+
+</html>

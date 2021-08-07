@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>65_버스요금테이블</title>
+    <style>
+        table,th,td{
+            border-collapse: collapse;
+            width: 600px;
+            height: 60px;
+            text-align: center;
+            
+        }
+        th,td{
+            border: 2px solid #1e51a8;
+        }
+        thead{
+            background: blue;
+            color: white;
+        }
+        table>thead>tr>th{
+            border: 2px solid #1e51a8;
+        }
+        #left1,#left2{
+            border-left: none;
+        }
+        .a{
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th colspan="3" id="left1">구분</th>
+            <th>일반</th>
+            <th>청소년</th>
+            <th>어린이</th>
+        </tr>
+        </thead>   
+        <tr>
+            <th rowspan="4" id="left2">일반버스</th>
+            <th rowspan="2">카드</th>
+            <th>현행</th>
+            <td>1,100원</td>
+            <td>770원</td>
+            <td class="a">400원</td>
+        </tr>
+        <tr>
+            <th>조정</th>
+            <td>1,250원</td>
+            <td>850원</td>
+            <td class="a">400원</td>
+        </tr>
+        <tr>
+            <th rowspan="2">현금</th>
+            <th>현행</th>
+            <td>1,200원</td>
+            <td>900원</td>
+            <td class="a">500원</td>
+        </tr>
+        <tr>
+            <th>조정</th>
+            <td>1,400원</td>
+            <td>1,000원</td>
+            <td class="a">500원</td>
+        </tr>
+    </table>
+</body>
+</html>

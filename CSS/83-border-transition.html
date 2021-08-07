@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>83-border-transition</title>
+    <style>
+        .imgWrap{
+            width:360px;
+            height:450px;
+            position: relative;
+        }
+        .imgWrap>img{
+            width: 100%;
+        }
+        .border{
+            width:100%;
+            height:100%;
+            border:0px solid deeppink;
+            position:absolute;
+            top:0;
+            left:0;
+            box-sizing: border-box;
+            opacity: 0;
+            transition:0.3s;
+        }
+        .imgWrap:hover .border{
+            border-width: 40px;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="imgWrap">
+        <img src="images/3-600x750.jpg" alt="">
+        <div class="border"></div>
+    </div>
+</body>
+</html>

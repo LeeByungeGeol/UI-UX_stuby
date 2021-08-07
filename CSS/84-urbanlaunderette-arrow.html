@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .more{
+            background-color: #ddd;
+        }
+        .more .hexagon>img{
+            opacity: 0;
+        }
+        .more:hover .hexagon>img{
+            opacity: 1;
+            animation-name: ani;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes ani{
+            0%{
+                transform:rotate(0deg);
+                
+            }
+            100%{
+                transform:rotate(180deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="more">
+        <a href="#">
+            <span>view more</span>
+            <div class="hexagonArrow">
+                <span class="arrow"><img src="images/iconmonstr-arrow-right-thin-48.png" alt=""></span>
+                <span class="hexagon"><img src="images/iconmonstr-hexagon-1-48.png" alt=""></span>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>

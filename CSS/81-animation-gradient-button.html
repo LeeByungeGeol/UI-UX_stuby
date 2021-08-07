@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81-animation-gradient-button</title>
+    <style>
+        .button {
+            width: 180px;
+            height: 50px;
+            border-radius: 30px;
+            text-align: center;
+            padding: 5px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e2c84+0,d829ca+23,efd126+49,99b21c+74,1e2c84+100 */
+
+            background: rgb(30, 44, 132);
+            /* Old browsers */
+            background: -moz-linear-gradient(left, rgba(30, 44, 132, 1) 0%, rgba(216, 41, 202, 1) 23%, rgba(239, 209, 38, 1) 49%, rgba(153, 178, 28, 1) 74%, rgba(30, 44, 132, 1) 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(30, 44, 132, 1) 0%, rgba(216, 41, 202, 1) 23%, rgba(239, 209, 38, 1) 49%, rgba(153, 178, 28, 1) 74%, rgba(30, 44, 132, 1) 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(30, 44, 132, 1) 0%, rgba(216, 41, 202, 1) 23%, rgba(239, 209, 38, 1) 49%, rgba(153, 178, 28, 1) 74%, rgba(30, 44, 132, 1) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e2c84', endColorstr='#1e2c84', GradientType=1);
+            /* IE6-9 */
+            background-size:400%;
+
+
+        }
+        .button>span{
+            display: block;
+            /* background:white; */
+            border-radius: 30px;
+            font-size:25px;
+            line-height: 50px;
+            color:white;
+        }
+        .button:hover{
+            animation-name: bgAni;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes bgAni{
+            0%{
+                background-position:0 center;
+            }
+            100%{
+                background-position:400% center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button"><span>자세히보기</span></div>
+</body>
+
+</html>
