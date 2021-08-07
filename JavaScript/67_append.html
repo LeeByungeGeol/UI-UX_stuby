@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>67_append</title>
+    <style>
+        .append {
+            padding: 20px;
+            background: pink;
+        }
+        
+        p {
+            background: skyblue;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // div안에 p를 추가하기 append
+            var app = document.querySelector(".append");
+            var text = document.querySelector(".text");
+            app.append(text);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>append</h1>
+    <div class="append">
+        aaa
+    </div>
+    <p class="text">12345</p>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>77-video</title>
+    <style>
+        body,ul,li{
+            margin:0;
+            padding:0;
+        }
+        .videoWrap{
+            width:600px;
+            margin:30px auto;
+        }
+        .videoWrap>video{
+            width:100%;
+        }
+        .controlBtn{
+            display: flex;
+            justify-content: center;
+
+        }
+        .controlBtn>li{
+            list-style: none;
+            margin:0 10px;
+        }
+    </style>
+    <script src="js/77-video.js"></script>
+</head>
+<body>
+    <h1>video</h1>
+    <div class="videoWrap">
+        <video src="video/vin.mp4" id="myvideo"></video>
+        <ul class="controlBtn">
+            <li class="play"><a href="#"><img src="images/platy.png" alt=""></a></li>
+            <li class="stop"><a href="#"><img src="images/stop.png" alt=""></a></li>
+            <li class="back"><a href="#"><img src="images/back.png" alt=""></a></li>
+            <li class="reward"><a href="#"><img src="images/reward.png" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>71_banner_left_right</title>
+    <style>
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #mainBanner {
+            position: relative;
+        }
+        
+        .btn {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+        }
+        
+        .btn>li {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .btn a {
+            position: absolute;
+            top: 50%;
+        }
+        
+        .btn .leftBtn {}
+        
+        .btn .rightBtn {
+            right: 0;
+        }
+    </style>
+    <script src="js/71_banner.js"></script>
+</head>
+
+<body>
+    <div id="mainBanner">
+        <div class="banner">
+            <img src="images/main-banner1.jpg" alt="bannerImg " class="bannerImg">
+        </div>
+        <ul class="btn">
+            <li><a href="#" class="leftBtn">left</a></li>
+            <li><a href="#" class="rightBtn">right</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

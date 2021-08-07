@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36_사용자정의객체_tv</title>
+    <script>
+        //TV객체 만들기
+        // 2가지
+        // 객체 리터럴 방식
+        var TV1 = {
+            // 속성
+            brand : "samsung",
+            flat:"flat",
+            inch: 65,
+            // 동작
+            on:function(){
+                console.log("tv on");
+            }
+        };
+
+        // 오브젝트 선언 방식
+        var TV2 = new Object();
+        // 속성
+        TV2.brand = "LG";
+        TV2.flat ="curve";
+        TV2.inch =60;
+        // 동작
+        TV2.on = function(){
+            console.log("TV2 on이 되었습니다.")
+        }
+
+        console.log(TV1.brand);
+        console.log(TV2.brand); 
+        TV1.on();
+        TV2.on();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

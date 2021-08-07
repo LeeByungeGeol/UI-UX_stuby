@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_용돈관리</title>1000
+    <script>
+        var bus = prompt("차비를 입력하세요","");
+        var price = prompt("식비를 입력하세요","");
+        var desert = prompt("디저트비를 입력하세요","");
+        var hum = Number(bus)+Number(price)+Number(desert);
+        
+        console.log(hum);
+
+        hum >= 12000 ? console.log(hum-12000 + "이 초과되어 용돈관리가 필요합니다.") : console.log("용돈 관리가 잘 되었습니다.");
+    </script>
+</head>
+
+<body>
+    차비, 식비, 디저트비를 입력받아서
+    1. 합계 콘솔창에 출력하기
+    2. 합계 >= 12000 비교하여 크면 "합계 - 12000을 해서 초과되었습니다. 용돈관리가 필요합니다."
+    초과되지 않았으면 "용돈 관리가 잘 되었습니다."
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80_requestAniMaintonFrame</title>
+</head>
+<style>
+    .box {
+        width: 50px;
+        height: 50px;
+        background: green;
+        position: absolute;
+    }
+</style>
+<script>
+    // window.addEventListener("load", function() {
+    //     let el = document.querySelector(".box");
+    //     let moveX = 0;
+
+    //     function boxMove() {
+    //         moveX += 1;
+    //         el.style.left = moveX + "px";
+    //         if (moveX < 500) {
+    //             window.requestAnimationFrame(boxMove);
+    //         }
+    //     }
+    //     window.requestAnimationFrame(boxMove);
+    // })
+    window.addEventListener("load", function() {
+        let el = document.querySelector(".box");
+        let moveX = 0;
+
+        function boxMove() {
+            moveX += 1;
+            el.style.left = moveX + "px";
+            if (moveX >= 500) {
+                window.clearInterval(timer);
+            }
+        }
+        var timer = window.setInterval(boxMove, 1000 / 60);
+    })
+</script>
+
+<body>
+    <div class="box">1</div>
+</body>
+
+</html>

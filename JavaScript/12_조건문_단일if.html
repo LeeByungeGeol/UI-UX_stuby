@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_조건문_단일if</title>
+</head>
+
+<body>
+    <h1>단일if</h1>
+    <p>비교연산을 통해 조건이 참인 경우 처리할 경우</p>
+    <p>
+        if(조건문)
+        처리할문장;
+
+        if(조건문){
+        조건이 참일 경우 처리할 문장들;
+        }
+    </p>
+    <p> 데이터 -나이를 입력받아서 20이하면 :학생이 출력되도록 </p>
+
+    <script>
+        var age = Number(prompt("당신의 나이를 입력하세요.", ""));
+        if (age <= 20) {
+            document.write("학생");
+            console.log("학생");
+        }
+    </script>
+</body>
+
+</html>

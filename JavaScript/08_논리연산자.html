@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_논리연산자</title>
+    <script>
+        //변수를 3개 선언하기
+        var num1 = 100, num2 = 5, num3 = "5", num4 = 50;
+
+        // num1, num2의 >= 그 결과값을 반대로 만들기
+        // 현상태를 반대로 만들어줄때
+        console.log(!num1 >= num2);
+
+        // && 두개의 조건을 다 만족했을때만 true
+        // num1<num2 && num2>num4 => 0 && 0 =>false
+        console.log(num1 < num2 && num2 > num4);
+
+        // num1<num2 && num2<num4 ==> 0 && 1 =>false
+        console.log(num1 < num2 && num2 < num4);
+
+        // num1>num2 && num2>num4 ==> 1 && 0 =>false
+        console.log(num1 > num2 && num2 > num4);
+
+        // num1>num2 && num2<num4 ==> 1 && 1 =>true
+        console.log(num1 > num2 && num2 < num4);
+
+
+        // || 둘중에 하나만 만족하면 true
+        // num1<num2 || num2>num4 => 0 || 0 ==> false
+        console.log(num1 < num2 || num2 > num4);
+
+        // num1<num2 || num2<num4 => 0 || 1 ==> true
+        console.log(num1 < num2 || num2 < num4);
+
+        // num1>num2 || num2>num4 => 1 || 0 ==> true
+        console.log(num1 > num2 || num2 > num4);
+
+        // num1>num2 || num2<num4 => 1 || 1 ==> true
+        console.log(num1 > num2 || num2 < num4);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

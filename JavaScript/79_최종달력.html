@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>79_최종달력</title>
+    <style>
+        ul,
+        li {
+            padding: 0;
+        }
+        
+        .calWrap {
+            width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        
+        .btn {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            line-height: 50px;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        th {
+            background-color: cornflowerblue;
+            color: white;
+        }
+        
+        td.on {
+            background-color: coral;
+            color: white;
+        }
+    </style>
+    <script src="js/79_cal.js"></script>
+</head>
+
+<body>
+    <div class="calWrap">
+        <h1 class="monthTitle"></h1>
+        <ul class="btn">
+            <li><a href="#" class="prevBtn">이전달</a></li>
+            <li><a href="#" class="nextBtn">다음달</a></li>
+        </ul>
+        <div class="cal"></div>
+    </div>
+</body>
+
+</html>

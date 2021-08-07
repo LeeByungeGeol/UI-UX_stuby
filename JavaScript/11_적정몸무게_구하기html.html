@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_적정몸무게_구하기</title>1000
+    <script>
+        var a = prompt("당신의 키를 입력하세요","");
+        var b = prompt("당신의 몸무게를 입력하게요","");
+        var roll1 = (Number(a)-100)*0.9;
+        var roll2 = (roll1-5 <= b <=roll1+5 );
+        console.log(roll1);
+        console.log(roll2);
+        // roll1-5 <= Number(a) && Number(b) <= roll1+5 ? console.log("적정몸무게입니다.") : console.log("노력하세요")
+        roll2 = false ? console.log("적정몸무게") : console.log("살빼");
+    </script>
+</head>
+<body>
+</body>
+
+</html>

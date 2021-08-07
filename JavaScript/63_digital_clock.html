@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63_digital_clock</title>
+    <script>
+        function myDigit() {
+            // 오늘의 날짜 정보
+            var today = new Date();
+
+            // 시간
+            var hours = today.getHours();
+
+            // 분
+            var m = today.getMinutes();
+
+            // 초
+            var sec = today.getSeconds();
+
+            console.log(`${hours} : ${m} : ${sec}`);
+
+            // 시계
+            var mClock = document.querySelector("#myClock");
+            mClock.innerHTML = `${hours} : ${m} : ${sec}`;
+        }
+
+        setInterval("myDigit()", 1000);
+    </script>
+</head>
+
+<body>
+    <div id="myClock">
+
+    </div>
+</body>
+
+</html>

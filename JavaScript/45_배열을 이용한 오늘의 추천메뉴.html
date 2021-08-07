@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45_배열을 이용한 오늘의 추천메뉴</title>
+    <script>
+        var lunch =["카레우동","닭칼국수","알탕","차돌된장","짬뽕"];
+
+        // 임의의 숫자 만들기 0~length
+        var rnd = Math.floor(Math.random()*lunch.length);
+        console.log(rnd);
+        document.write(`오늘의 추천메뉴는 ${lunch[rnd]}`);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

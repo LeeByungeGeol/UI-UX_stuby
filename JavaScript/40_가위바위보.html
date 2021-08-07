@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40_가위바위보</title>
+    <script>
+        // 사용자로부터 가위,바위,보 중에 하나를 입력받기
+        var game = prompt("가위,바위,보 중에 하나를 입력하세요.", "");
+
+        var gameNum;
+
+        switch (game) {
+            case "가위":
+                gameNum = 1;
+                break;
+            case "바위":
+                gameNum = 2;
+                break;
+            case "보":
+                gameNum = 3;
+                break;
+        }
+
+        // 컴퓨터가 1~3사이의 임의의 숫자 발생하기
+        var com = Math.ceil(Math.random()*3);
+        console.log(com);
+
+        if(gameNum == com){
+            console.log("이겼다!!");
+        }
+        else{
+            console.log("졌다!!!");
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>가위바위보</h1>
+    <p>컴퓨터와 내가 생각한 숫자가 같으면 내가 이기고 다르면 컴퓨터가 이긴다.</p>
+
+</body>
+
+</html>

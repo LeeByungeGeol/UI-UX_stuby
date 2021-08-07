@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var userEmail = prompt("당신의 이메일 주소를 입력하세요", "");
+        var arrUrl = [".co.kr", ".com", ".net", ".go.kr"];
+        // @를 포함하는지를 체크
+        var check1 = false;
+        // arrUrl에 있는 값이 아닌지를 체크
+        var check2 = false;
+
+        if (userEmail.indexOf("@") > 0) {
+            check1 = true;
+        }
+
+        for (i = 0; i < arrUrl.length; i++) {
+            // if (userEmail.indexOf(arrUrl[i]) > 0) {
+            //     check2 = true;
+            // }
+            if (userEmail.endsWith(arrUrl[i])) {
+                check2 = true;
+            }
+        }
+        if (check1 && check2) {
+            document.write(userEmail);
+        } else {
+            document.write("이메일형식이 틀렸습니다.")
+        }
+    </script>
+</head>
+
+<body>
+    <p>이메일을 입력받아서</p>
+    <p>@가 포함되고, .oc.kr, .com .net .go.kr 이 포함되었는지 체크하여 둘다 포함되면 이베일을 보여주고, 그렇지 않으면 "형식이 틀렸습니다"를 보여준다.</p>
+</body>
+
+</html>

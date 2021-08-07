@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>53_window_setlnterval</title>
+    <script>
+        // 1초마다 콘솔창에 숫자가 1씩 증간된 값이 출력이 되도록
+        var i = 1;
+        var timer = setInterval("console.log(i++)", 1000);
+    </script>
+</head>
+
+<body>
+    <button onclick="timer=setInterval('console.log(i++)',1000)">play</button>
+    <button onclick="clearInterval(timer)">stop</button>
+</body>
+
+</html>

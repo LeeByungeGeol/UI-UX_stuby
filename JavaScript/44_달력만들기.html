@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44_달력만들기.html</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        // 오늘의 날짜 정보 얻어오기
+        var today = new Date();
+        // 2021 05 26 수요일
+
+        // 년도
+        var year = today.getFullYear();
+        // 2021
+        console.log(year);
+
+        // 월
+        var month = today.getMonth();
+        // 4
+        console.log(month);
+
+        // 이번달 1일에 대한 전체 정보
+        var thisDay = new Date(year, month, 1);
+        console.log(thisDay);
+
+        // 이번달 1일의 요일 정보 얻어오기
+        var thisWeek = thisDay.getDay();
+        console.log(thisWeek);
+
+        // 각 달의 마지막 날짜정보를 저장할 배열 만들기
+        var lastDate = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        // 윤년구하기 2월의 마지막날 29
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            lastDate[1] = 29;
+        }
+
+        // 줄수 계산하기
+        // 1일의 요일
+        // 마지막 요일
+        var row = Math.ceil((thisWeek + lastDate[month]) / 7);
+        console.log(row);
+
+        // 날짜
+        var num = 1;
+
+        // 달력을 저장할 변수 만들기
+        var cal = "<table>";
+        cal += "<tr>";
+        cal += "<th>일</th>";
+        cal += "<th>월</th>";
+        cal += "<th>화</th>";
+        cal += "<th>수</th>";
+        cal += "<th>목</th>";
+        cal += "<th>금</th>";
+        cal += "<th>토</th>";
+        cal += "</tr>";
+
+        // 줄
+        for (i = 1; i <= row; i++){
+            cal += "<tr>";
+                // 칸
+                for(j=1; j<=7; j++){
+                    if(j<=thisWeek && i==1 || num>lastDate[month]){
+                        cal +="<td></td>"
+                    }
+                    else{
+                        cal += `<td> ${num} </td>`;
+                        num++;
+                    }
+                }
+            cal += "</tr>";
+        }
+        cal += "</table>";
+
+        document.write(cal);
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

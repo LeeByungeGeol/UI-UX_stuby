@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51_alert_prompt_confirm</title>
+    <script>
+        // 경고창
+        window.alert("설문을 시작합니다");
+        // 사용자로부터 데이터 입력받기
+        var userAge = window.prompt("당신의 나이를 입력하세요", "");
+        // 확인취소
+        var okCancle = window.confirm("정말로 나이가 맞나요?");
+        console.log(okCancle);
+        // 확인 취소에서 확인을 클릭하면 나이가 20보다 큰지 작은지 체크
+        // 크면 설문이 가능합니다. 작으면 설문이 불가능합니다
+        // 취소를 클릭하면 다시 설문에 참석하세요를 출력하도록
+
+        if (okCancle) {
+            if (userAge >= 20) {
+                document.write("설문이 가능합니다.");
+            } else {
+                document.write("설문이 불가능합니다.");
+            }
+        } else {
+            document.write("다시 설문에 참석하세요.")
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

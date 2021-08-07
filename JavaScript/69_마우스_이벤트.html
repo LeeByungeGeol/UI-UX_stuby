@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>69_마우스_이벤트</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+    </style>
+    <script>
+        // body의 배경색을 변경할 함수 만들기
+        // btn1을 클릭하면 body의 배경이 변경되도록하는 함수
+        function bg() {
+            // body가 아직 실행되기전이라서 전역변수는 못한다. 지역변수만 가능
+            var myBody = document.querySelector("body");
+            myBody.style.backgroundColor = "pink";
+            // myBody.style.["background-color"] = "pink";
+            // myBody.style.["backgroundcolor"] = "pink";
+        }
+        // 이벤트 주기
+        window.onload = function() {
+            // btn2를 더블클릭하면 배경이 하늘색으로 변경되도록
+            // 선택자.이벤트 종류 = function(){}
+            // document.querySelector(".btn2").ondblclick = function() {
+            //     document.querySelector("body").style.backgroundColor = "skyblue";
+            // }
+
+            var mybody = document.querySelector("body");
+            var btn2 = document.querySelector(".btn2");
+            var btn3 = document.querySelector(".btn3");
+            var btn4 = document.querySelector(".btn4");
+            var btn5 = document.querySelector(".btn5");
+            var btn6 = document.querySelector(".btn6");
+            var btn7 = document.querySelector(".btn7");
+
+            btn2.ondblclick = function() {
+                mybody.style["backgroundColor"] = "skyblue";
+            }
+            btn3.onmouseover = function() {
+                mybody.style.backgroundColor = "orange";
+            }
+            btn3.onmouseout = function() {
+                mybody.style.backgroundColor = "white";
+            }
+            btn4.onmouseout = function(e) {
+                mybody.style.backgroundColor = "green";
+                console.log(e);
+            }
+            btn5.addEventListener("mousedown", function() {
+                mybody.style.backgroundColor = "purple";
+            })
+
+            btn6.addEventListener("mouseup", function() {
+                mybody.style.backgroundColor = "gray";
+            })
+
+            // mybody에서 마우스가 움직이면 움직인 위치값 x,y 이벤트 종료, 이벤트 대상
+            mybody.addEventListener("mousemove", function(e) {
+                // e event의 약자
+                // console.log(e);
+                // 이벤트의 종류 e.type
+                // 이벤트를 준 대상 찾기 e.target
+                // x e.clientX
+                // y e.clientY
+                console.log(`x:${e.clientX} : ${e.clientY}`);
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <!-- btn1을 클릭하면 body의 배경이 하늘색으로 바뀌도록 태그에 이벤트 주기-->
+    <!-- btn2번부터 btn6까지는 각 글자의 이벤트를 주면 body의 배경이 바뀌도록 스크립트 이벤트 주기-->
+    <!-- btn7번은 addEventListener를 이용하여 마우스의 좌표값 콘솔에 출력해보기 -->
+    <button class="btn1" onclick="bg();">click</button>
+    <!-- 안에 바로 실행하는 방법도 있다. -->
+
+    <button class="btn2">double click</button>
+
+
+    <button class="btn3">mouse over</button>
+
+
+    <button class="btn4">mouse out</button>
+
+
+    <button class="btn5">mouse down</button>
+
+
+    <button class="btn6">mouse up</button>
+
+
+    <button class="btn7">mouse move</button>
+
+
+</body>
+
+</html>

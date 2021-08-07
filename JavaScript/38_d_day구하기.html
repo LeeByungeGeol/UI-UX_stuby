@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38_d_day구하기</title>
+    <script>
+        // 특정 날짜에 대한 정보 얻어오기
+        // 21년 8월 18일
+        // 월에는 내가 원하는 달보다 -1을 해야한다. (0부터 시작하기 때문에)
+        var dDay = new Date(2021,7,18);
+        console.log(dDay);
+
+        // 오늘 날짜에 대한 정보
+        var toDay =new Date();
+        console.log(toDay);
+
+        var diff = dDay - toDay;
+        console.log(diff); //밀리초
+        console.log(diff/(24*60*60*1000)); //일수
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

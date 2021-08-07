@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37_내장객체_Date</title>
+    <script>
+        // 오늘의 날짜 정보 얻어오기
+        var date = new Date();
+        console.log(date);
+
+        // 년도 정보 얻어오기
+        var year = date.getFullYear();
+        console.log(year);
+
+        // 월 정보 얻어오기
+        var month = date.getMonth();
+        console.log(month+1); 
+        
+        // 일 정보 얻어오기
+        var today = date.getDate();
+        console.log(today);
+        
+        // 요일 정보 얻어오기
+        var day = date.getDay();
+        console.log(day); 
+        
+        // 시간
+        var hours = date.getHours();
+        // 수동시간으로 한다면
+        // if(hours>12) hours -=12;
+        console.log(hours);
+
+        // 분
+        var m = date.getMinutes();
+        console.log(m);
+
+        // 초
+        var seconds = date.getSeconds();
+        console.log(seconds);
+
+        // 밀리초  (1/1000초)
+        var mseconds = date.getMilliseconds();
+        console.log(mseconds);
+
+        // 1970년 1월1일 이후에 경과 된 시간을 밀리초로 나타내기 getTime
+        var gt=date.getTime();
+        console.log(gt);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

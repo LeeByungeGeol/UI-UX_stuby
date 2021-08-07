@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_for_star</title>
+    <script>
+        for (i = 1; i < 11; i++) {
+            for (j = 0; j < i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        for (i = 1; i < 11; i++) {
+            for (j = 0; j < i; j++) {
+                document.write("♡");
+            }
+            document.write("<br>");
+        }
+        var heart = "";
+        for (k = 1; k <= 10; k++) {
+            heart += "☆";
+            document.write(`${heart}<br>`);
+        }
+
+        var star = "★";
+        for (var i = 1; i <= 10; i++) {
+            document.write(star.repeat(i) + "<br>");
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#" onclick="window.close();">닫기</a>
+</body>
+
+</html>

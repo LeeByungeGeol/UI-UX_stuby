@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34_함수를_배경색바꾸기</title>
+    <script>
+        function colorBg(color){
+            console.log(color);
+            // css에서 backgroundColor를 참고를 하겠다.
+            document.querySelector("body").style.backgroundColor=color;
+        }
+    </script>
+</head>
+<body>
+    <!-- 호출 명령할때는 ""를 넣어야 한다. -->
+    <button onclick="colorBg('pink');">pink</button>
+    <button onclick="colorBg('skyblue');">skyblue</button>
+    <button onclick="colorBg('orange');">orange</button>
+    <button onclick="colorBg('green');">green</button>
+</body>
+</html>

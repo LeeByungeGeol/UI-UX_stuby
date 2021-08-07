@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>68_cloneNode_복사하기</title>
+    <script>
+        window.onload = function() {
+            var menu = document.querySelector("ul");
+            // menu의 첫번쨰 자식을 복사하기
+            var first = menu.firstElementChild.cloneNode(true);
+
+            // menu의 마지막 자식을 복사하기
+            var last = menu.lastElementChild.cloneNode(true);
+
+            // menu.appendChild(first); 익스 11에서는 지원이 되지 않아서 appendChild
+            menu.append(first);
+            // 첫번째 li를 복사하여 ul에 마지막에 붙이기
+
+            // prepend 익스 11에서는 사용못함 대체 없음
+            menu.prepend(last);
+            // 마지막 li를 복사하여 ul에 첫번째에 붙이기
+        }
+
+        // 배너로 따지자면 5->1로 가기 위해 한다.
+    </script>
+</head>
+
+<body>
+    <h1>복사하기</h1>
+    <p>첫번째 li를 복사하여 ul에 마지막에 붙이기</p>
+    <p>마지막 li를 복사하여 ul에 첫번째에 붙이기</p>
+    <ul>
+        <li><a href="#">list1</a></li>
+        <li><a href="#">list2</a></li>
+        <li><a href="#">list3</a></li>
+        <li><a href="#">list4</a></li>
+        <li><a href="#">list5</a></li>
+    </ul>
+</body>
+
+</html>

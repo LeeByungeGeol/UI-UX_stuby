@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43_배열을_이용한_요일구하기</title>
+    <script>
+        // 날짜 객체 선언하기
+        var today = new Date();
+
+        // 요일을 저장할 배열 선언하기
+        var week = ["일","월","화","수","목","금","토"]
+
+        // 오늘 요일 구하기
+        var theDay = today.getDay(); //0일 1월 0~6
+        console.log(theDay);
+
+        document.write("오늘의 " + week[theDay] + "요일입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_과락_합격_불합격</title>
+    <script>
+        var a = Number(prompt("1과목 점수를 입력하시오.",""));
+        var b = Number(prompt("2과목 점수를 입력하시오.",""));
+        var c = Number(prompt("3과목 점수를 입력하시오.",""));
+        var sum = (a+b+c)/3;
+        document.write("1과목의 점수 : " + a + "<br>");
+        document.write("2과목의 점수 : " + b + "<br>");
+        document.write("3과목의 점수 : " + c + "<br>");
+        document.write("평균점수 : " + sum + "<br>");
+        if(a>=40 && b>=40 && c>=40){
+            if(sum >=60)
+            document.write("합격")
+            else{
+                document.write("불합격")
+            }
+        }
+        else{
+            document.write("과락");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

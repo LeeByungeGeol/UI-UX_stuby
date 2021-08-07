@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33_return함수_성적구하기</title>
+    <script>
+        // ui 디자인, ui 구현 점수를 입력받아서, 평균을 구하는 함수를 호출하여,평균을 구한 다음 그 결과를 되돌려주기
+        // 평균을 구하는 함수 만들기
+        function avg(uDesign,ui){
+            var result = (uDesign + ui)/2;
+            return result;
+        }
+        var uD= Number(prompt("당신의 ui디자인 점수를 입력하세요",""));
+        var uI= Number(prompt("당신의 ui구현 점수를 입력하세요",""));
+
+        var avgDate = avg(uD,uI);
+        document.write("당신의 평균점수는 :" +avgDate)
+        console.log(avgDate);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>78-video</title>
+    <style>
+        * {margin: 0;            padding: 0;        }
+        .videoWrap {
+            width: 640px;
+            margin: 50px auto;
+            position: relative;
+        }
+        a {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 50%;
+        }
+        img { vertical-align: top;}
+        .videoWrap>video {width: 100%;}
+        .videoWrap:hover a { display: block;}
+    </style>
+    <script src="js/78-video.js"></script>
+</head>
+
+<body>
+    <div class="videoWrap">
+        <video src="video/vin.mp4" id="myvideo"></video>
+        <a href="#"><img src="images/platy.png" alt="" class="play"></a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>46-Number</title>
+    <script>
+    //변수 선언하기
+    var num1 = "10.5522";
+    var num2 =123;
+    var num3 =111.222;
+    var num4 = "javscript";
+
+    //문자를 숫자로 변환하기
+    //1. Number
+    //2. parseInt
+    //3. parseFloat
+    document.write(Number(num1)+10+"<br>");
+        // parseInt 정수변환 함수
+    document.write(parseInt(num1)+10+"<br>");
+        // parseFloat 실수변환 함수
+    document.write(parseFloat(num1)+10+"<br>");
+
+    //소수점 처리하기 자리수
+    //toFixed(#) #자리까지만 표시
+    document.write(num3.toFixed(2)+"<br>");
+    document.write(num3.toPrecision(5)+"<br>");
+
+    document.write(isNaN(num1)+"<br>");
+    document.write(isNaN(num2)+"<br>");
+    document.write(isNaN(num3)+"<br>");
+    document.write(isNaN(num4)+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

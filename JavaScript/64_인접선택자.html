@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>64_인접선택자</title>
+    <style>
+        .on {
+            color: sandybrown;
+            background: skyblue;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // .nextTitle을 선택하여 바로 다음에 오는 형제를 선택하기
+            // nextSibling, nextElementSibling
+            var next = document.querySelector(".nextTitle");
+            console.log(next.nextSibling);
+            console.log(next.nextElementSibling);
+            next.nextElementSibling.style.backgroundColor = "pink";
+
+            // menu 이전에 오는 h2 요소를 선택하여 글자색
+            var prev = document.querySelector(".menu");
+            prev.previousElementSibling.style.color = "green";
+
+            // prevTitle 다음에 오는 ul안에 있는 글자색 변경
+            var link = document.querySelectorAll(".menu>li>a");
+            console.log(link);
+            // link.style.color = "skyblue";
+            for (i = 0; i < link.length; i++) {
+                // link[i].style.color = "skyblue";
+                link[i].classList.add("on");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>인접선택자</h1>
+    <h2 class="nextTitle">형제선택자</h2>
+    <ul class="list">
+        <li>list5</li>
+        <li>list5</li>
+        <li>list5</li>
+        <li>list5</li>
+        <li>list5</li>
+    </ul>
+
+    <h2 class="prevTitle">형제선택자</h2>
+    <ul class="menu">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+    </ul>
+</body>
+
+</html>

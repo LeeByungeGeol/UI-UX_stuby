@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35_지역변수_전역변수</title>
+    <script>
+        // 전역변수 total은 모든곳에서 사용되는 변수
+        var total;
+        //두 수의 합을 구하는 함수
+        function hap(a,b){
+            // 지역변수 total은 hap함수 안에서만 사용이 가능한 변수이다.
+            // var total = a+b;
+            total = a+b;
+        }
+        hap(10,20);
+        console.log(total);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

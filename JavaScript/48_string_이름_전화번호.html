@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48_string_이름_전화번호</title>
+    <script>
+        // 이름 입력받기
+        var userName = prompt("당신의 이름을 영문자로 입력하세요", "");
+
+        // 전화번호 입력받기
+        var userTel = prompt("전화번호를 - 없이 입력하세요", "");
+
+        // 이름을 대문자로 출력하기
+        document.write(userName.toUpperCase() + "<br>");
+
+        // 전화번호
+        var result = userTel.substr(0, userTel.length - 4) + "****";
+        document.write("당신의 전화번호는 :" + result);
+        console.log(result);
+        console.log(userTel.length);
+    </script>
+</head>
+
+<body>
+    <p>이름은 대문자로 표시하고</p>
+    <p>전화번호 마지막 4글자는 *로 표시</p>
+</body>
+
+</html>
