@@ -1,0 +1,18 @@
+.todo-wrap{
+    background:#eee;
+    width:500px;
+    margin:50px auto 0;
+}
+.title{
+    font-size:30px;
+    text-align: center;
+    background-color:royalblue;
+    color:white;
+    padding:20px 0;
+}
+.form-wrapper{
+    padding:10px;
+}
+.todos-wrapper{
+
+}
