@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-line-dash</title>
+    <style>
+        canvas{
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var canvas = document.querySelector("#dash");
+            var ctx= canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.lineWidth=1;
+            ctx.setLineDash([20,5])
+            ctx.moveTo(50,50);
+            ctx.lineTo(250,50);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.lineWidth=1;
+            ctx.setLineDash([20,5])
+            ctx.moveTo(50,100);
+            ctx.lineTo(250,100);
+            // 값이 양수면 앞으로, 음수면 뒤로
+            ctx.lineDashOffset=-5;
+            ctx.stroke();
+
+        }
+    </script>
+</head>
+<body>
+    <h1>lineDash</h1>
+    <canvas id="dash" width="600" height="600"></canvas>
+</body>
+</html>

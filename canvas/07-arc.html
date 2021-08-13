@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-arc</title>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("arc");
+            var ctx = canvas.getContext("2d");
+
+            //시계방향으로 그리기
+            ctx.beginPath();
+            ctx.arc(50,50,50,0,Math.PI/2,0); //
+
+            ctx.moveTo(100,150)
+            ctx.arc(50,150,50,0,Math.PI,0);
+
+            ctx.moveTo(100,300);
+            ctx.arc(50,300,50,0,Math.PI+Math.PI/2,0);
+
+            ctx.moveTo(100,450);
+            ctx.arc(50,450,50,0,Math.PI*2,0)
+
+            ctx.moveTo(350,50);
+            ctx.arc(300,50,50,0,Math.PI+Math.PI/2,1);
+
+            ctx.moveTo(350,150);
+            ctx.arc(300,150,50,0,Math.PI,1);
+
+            ctx.moveTo(350,300);
+            ctx.arc(300,300,50,0,Math.PI/2,1);
+            ctx.stroke();
+        }
+    </script>
+</head>
+<body>
+    <h1>arc</h1>
+    <canvas id="arc" width="800" height="800"></canvas>
+</body>
+</html>

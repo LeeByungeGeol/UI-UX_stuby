@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-rect</title>
+    <script>
+        window.onload=function(){
+            var canvas = document.querySelector("#rect");
+            var ctx = canvas.getContext("2d");
+            // 검정색으로 채워진 사각형
+            //중간영역을 사각형형태로 지워서 햄버거 버튼 모양만들기
+            ctx.fillRect(10,10,50,45);
+            ctx.clearRect(10,15,50,15);
+            ctx.clearRect(10,35,50,15);
+            
+            // 채우는 색상 변경하기
+            ctx.fillStyle="green";
+            ctx.fillRect(10,100,50,50);
+
+            ctx.strokeStyle="hotpink";
+            ctx.strokeRect(10,200,50,50);
+        }
+    </script>
+</head>
+<body>
+    <h1>rect</h1>
+    <canvas id="rect" width="600" height="600"></canvas>
+</body>
+</html>

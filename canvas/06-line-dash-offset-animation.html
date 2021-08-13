@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-line-dash-offset-animation</title>
+    <style>
+        canvas{
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var canvas = document.querySelector("#lineDash");
+            var ctx= canvas.getContext("2d");
+
+            //dash 선의 시작위치를 변경할 변수
+            var offset=0;
+
+            //선을 그려주는 함수
+            function draw(){
+                ctx.clearRect(0,0,600,600);
+                ctx.setLineDash([10,10]);
+                ctx.lineDashOffset = offset;
+                ctx.strokeRect(100,100,200,200);
+            }
+
+            function move(){
+                offset++;
+                draw();
+                setTimeout(move,10);
+            }
+
+            move();
+
+        }
+    </script>
+</head>
+<body>
+    <h1>lineDashOffset</h1>
+    <canvas id="lineDash" width="600" height="600"></canvas>
+</body>
+</html>

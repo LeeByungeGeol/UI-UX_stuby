@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00-sample</title>
+    <!-- 2. 스크립트로  canvas 렌더링하기 context 선언하기-->
+
+    <script>
+        window.onload=function(){
+            var can = document.getElementById("sample");
+            var ctx = can.getContext("2d");
+            // 사각형 채우기
+            ctx.fillRect(100,50,100,100);
+
+        }
+    </script>
+    <style>
+        canvas{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. canvas tag 크기는 태그에서 설정해야된다-->
+    <!-- style로 크기를 설정하면 배율이 변경되면서 안에 그려진 요소에도 영향을 준다.  -->
+    <canvas id="sample" width="600" height="600"></canvas>
+</body>
+</html>

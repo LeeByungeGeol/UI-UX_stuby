@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-arc-smile</title>
+    <script>
+        // 큰원 크기 반지름 100
+        //눈 반지름 20
+        //입 반지름 50
+        window.onload = function() {
+            var canvas = document.getElementById("smile");
+            var ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.arc(200, 200, 100, 0, 360, 0);          
+
+            ctx.moveTo(180, 170);
+            ctx.arc(160, 170, 20, 0, Math.PI*2, 1);            
+
+            ctx.moveTo(260, 170);
+            ctx.arc(240, 170, 20, 0, Math.PI, 1);            
+
+            ctx.moveTo(250, 220);
+            ctx.arc(200, 220, 50, 0, Math.PI, 0);
+            ctx.stroke();
+        }
+
+    </script>
+</head>
+<body>
+    <h1>arc</h1>
+    <canvas id="smile" width="800" height="800"></canvas>
+</body>
+</html>

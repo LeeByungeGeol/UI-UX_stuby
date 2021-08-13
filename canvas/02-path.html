@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-path</title>
+    <style>
+        canvas{border:1px solid black}
+    </style>
+    <script>
+        window.onload=function(){
+            var canvas= document.querySelector("#path");
+            var ctx =canvas.getContext("2d");
+            // path시작하기
+            ctx.beginPath();
+            ctx.moveTo(200,100);
+            ctx.lineTo(150,200);
+            ctx.lineTo(250,200);
+            ctx.fillStyle="#4488ff"
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.moveTo(150,220);
+            ctx.lineTo(250,220);
+            ctx.lineTo(200,320);
+            ctx.lineTo(150,220);
+            ctx.strokeStyle="#4488ff"
+            ctx.stroke();
+            ctx.closePath();
+
+            // 육각형
+            ctx.beginPath();
+            ctx.moveTo(200,350);
+            ctx.lineTo(250,380);
+            ctx.lineTo(250,440);
+            ctx.lineTo(200,470);
+            ctx.lineTo(150,440);
+            ctx.lineTo(150,380);
+            ctx.lineTo(200,350)
+            ctx.stroke();
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>path</h1>
+    <p>삼각형 그리기</p>
+    <canvas id="path" width="600" height="600"></canvas>
+</body>
+</html>

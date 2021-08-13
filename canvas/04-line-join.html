@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-line-join</title>
+    <script>
+        window.onload=function(){
+            var canvas= document.querySelector("#line");
+            var ctx = canvas.getContext("2d");
+            //선의모양을 저장할 배열만들기
+            var lineShape=["round","bevel","miter"];
+
+            ctx.lineWidth=10;
+            for(i=0;i<3 ; i++){
+                ctx.beginPath();
+                ctx.lineJoin= lineShape[i];
+                ctx.moveTo(10,10+i*100);
+                ctx.lineTo(60,60+i*100);
+                ctx.lineTo(110,10+i*100);
+                ctx.lineTo(160,60+i*100);
+                ctx.stroke();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>lineJoin</h1>
+    <canvas id="line" width="600" height="600"></canvas>
+</body>
+</html>

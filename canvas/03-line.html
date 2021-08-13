@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title03-line</title>
+    <script>
+        window.onload=function(){
+            var canvas = document.querySelector("#line");
+            var ctx= canvas.getContext("2d");
+
+            //선의 두께 조절하기
+            ctx.lineWidth=10;
+           
+            //패스 시작
+            ctx.beginPath();
+            //선의 시작위치 설정하기
+            ctx.moveTo(10,10);
+            ctx.lineTo(10,110);
+            ctx.stroke();
+
+            ctx.lineWidth=20;
+
+            //butt
+            ctx.beginPath();
+            ctx.moveTo(60,10);
+            ctx.lineTo(60,110);
+            ctx.stroke();
+
+            //round
+            ctx.beginPath();
+            ctx.lineCap="round";
+            ctx.moveTo(110,10);
+            ctx.lineTo(110,110);
+            ctx.stroke();
+
+            //square
+            ctx.beginPath();
+            ctx.lineCap="square";
+            ctx.moveTo(160,10);
+            ctx.lineTo(160,110);
+            ctx.stroke();
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>line</h1>
+    <canvas id="line" width="600" height="600"></canvas>
+</body>
+</html>
